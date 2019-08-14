@@ -44,7 +44,6 @@ $base-yellow: #ffde00;
   @media only screen and (max-width: 450px) {
     height: 65vh;
     min-height: 400px;
-    background-image: url("../../graphics/planet_400.jpg");
 
     .Home-img {
       overflow: hidden;
@@ -53,8 +52,7 @@ $base-yellow: #ffde00;
       z-index: -1;
       position: relative;
       &::before {
-        background-image: none;
-        filter: none;
+        background-image: url("../../graphics/planet_400.jpg");
       }
     }
   }

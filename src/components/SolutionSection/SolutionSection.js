@@ -21,8 +21,14 @@ class SolutionSection extends React.Component {
         <section className="SolutionSection" style={componentStyle}>
           <div className="SS-title">
             <p>
-              The <span className="text-gold">Lightency</span> solution was
-              conceived to answer specific problems faced by the African market
+              The{" "}
+              <span
+                className={`text-gold ${isVisible && "text-flicker-in-glow"}`}
+              >
+                Lightency
+              </span>{" "}
+              solution was conceived to answer specific problems faced by the
+              African market
             </p>
           </div>
           <SSGroups />

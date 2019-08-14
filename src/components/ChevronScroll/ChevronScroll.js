@@ -11,14 +11,17 @@ class ChevronScroll extends React.Component {
       transition: "all 0.2s ease-out"
     };
     return (
-      <div
-        className="container"
-        style={componentStyle}
-        onClick={() => window.scrollTo(0, 600)}
-      >
-        <div className="chevron" />
-        <div className="chevron" />
-        <div className="chevron" />
+      <div className="ChevronScroll">
+        <div
+          className="container"
+          style={componentStyle}
+          onClick={() => window.scrollTo(0, 600)}
+        >
+          <div className="chevron" />
+          <div className="chevron" />
+          <div className="chevron" />
+          <span class="text">Scroll down</span>
+        </div>
       </div>
     );
   }
