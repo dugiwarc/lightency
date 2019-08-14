@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns: repeat(40, 1fr);
     grid-template-rows: repeat(20, 1fr);
+    z-index: 1;
     .OS-header-title {
       grid-area: 4/8/19/17;
       font-size: 3rem;
