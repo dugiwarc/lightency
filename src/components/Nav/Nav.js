@@ -39,7 +39,7 @@ export default class Nav extends Component {
       position: "absolute",
       background: "black",
       filter: "opacity(0.6)",
-      width: "100vw",
+      width: "100%",
       height: "400vh",
       zIndex: "200",
       display: this.state.hamburgerIconIsClicked ? "block" : "none"
