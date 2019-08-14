@@ -7,7 +7,9 @@ export default class HamburgerLinks extends Component {
   state = { isClicked: false, isMenuActive: false };
   render() {
     const menuStyles = {
-      visibility: this.state.isClicked ? "visible" : "hidden"
+      visibility: this.state.isClicked ? "visible" : "hidden",
+      opacity: this.state.isClicked ? "1" : "0",
+      transition: "opacity .4s ease-in-out"
     };
     const bar_1 = {
       background: this.state.isClicked ? "gold" : "white",
