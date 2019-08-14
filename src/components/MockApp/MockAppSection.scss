@@ -1,0 +1,103 @@
+.MockApp {
+  display: flex;
+  width: 100%;
+  min-height: 900px;
+  background: #202a43;
+  flex-direction: column-reverse;
+  color: white;
+  .MA-text {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px 0 100px 0;
+    .MA-item {
+      width: 25%;
+    }
+    .MA-title {
+      font-size: 3rem;
+      font-weight: bold;
+      color: white;
+      width: 50px;
+      text-transform: uppercase;
+    }
+    .MA-desc {
+      font-weight: 100;
+      font-size: 1.5rem;
+    }
+  }
+  .MA-img {
+    flex-basis: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media only screen and (max-width: 1400px) {
+    .MA-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    min-height: 720px;
+    img {
+      width: 80%;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .MA-text {
+      .MA-desc {
+        font-weight: 100;
+        font-size: 0.8rem;
+        width: 80%;
+      }
+    }
+  }
+  @media only screen and (max-width: 950px) {
+    .MA-img {
+      img {
+        width: 100%;
+      }
+    }
+    .MA-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      .MA-title {
+        font-size: 3rem;
+        width: 100%;
+      }
+      .MA-desc {
+        font-weight: 100;
+        font-size: 1.3rem;
+      }
+      .MA-item {
+        width: 63%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        align-items: center;
+      }
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    min-height: 1300px;
+    .MA-text {
+      .MA-item {
+        .MA-title {
+          color: #ffde00;
+          text-align: start;
+        }
+        .MA-desc {
+          width: 100%;
+          text-align: start;
+        }
+      }
+    }
+  }
+}

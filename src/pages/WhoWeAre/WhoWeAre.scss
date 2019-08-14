@@ -1,0 +1,251 @@
+.WhoWeAre {
+  font-family: "Lato", sans-serif;
+  .WWA-WE {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .WWA-item-desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+    }
+    .WWA-vps,
+    .WWA-tech,
+    .WWA-advisors,
+    .WWA-ambassadors,
+    .WWA-team-founders {
+      transform: scale(1.5);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    .WWA-ambassadors {
+      margin-bottom: 200px;
+    }
+    .WWA-tech {
+      margin-top: 200px;
+      margin-bottom: 150px;
+    }
+    .WWA-advisors {
+      margin-bottom: 150px;
+    }
+    .WWA-team-founders {
+      margin: 100px 0 200px 0;
+    }
+    .WWA-title {
+      margin-bottom: 100px;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+
+    .WWA-title {
+      font-size: 5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  .WWA-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .WWA-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-align: center;
+    height: 200px;
+    background: #202a43;
+    color: white;
+    font-weight: bold;
+  }
+  .WWA-intro {
+    height: 300px;
+    font-size: 2rem;
+    font-weight: 100;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    color: black;
+    box-sizing: border-box;
+    padding: 50px 100px;
+    font-weight: bold;
+    p {
+      margin-bottom: 5px;
+    }
+  }
+  @media only screen and (max-width: 1600px) {
+    .WWA-WE {
+      .WWA-team-founders,
+      .WWA-vps,
+      .WWA-tech,
+      .WWA-advisors,
+      .WWA-ambassadors {
+        transform: scale(1.4);
+      }
+      .WWA-item {
+        margin: 0 20px;
+      }
+    }
+  }
+  @media only screen and (max-width: 1400px) {
+    .WWA-intro {
+      font-weight: 100;
+      text-align: center;
+    }
+    .WWA-title {
+      margin-top: 50px;
+    }
+    .WWA-WE {
+      .WWA-team-founders {
+        margin: 80px 0 80px 0;
+      }
+      .WWA-tech {
+        margin-top: 80px;
+        margin-bottom: 50px;
+      }
+      .WWA-advisors {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      .WWA-ambassadors {
+        margin-top: 50px;
+        margin-bottom: 100px;
+      }
+      .WWA-title {
+        margin-bottom: 0px;
+      }
+      .WWA-team-founders,
+      .WWA-vps,
+      .WWA-tech,
+      .WWA-advisors,
+      .WWA-ambassadors {
+        transform: scale(1.1);
+      }
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    .WWA-WE {
+      .WWA-team-founders,
+      .WWA-vps,
+      .WWA-tech,
+      .WWA-advisors,
+      .WWA-ambassadors {
+        transform: scale(1);
+      }
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    .WWA-intro {
+      font-size: 1.6rem;
+      padding: 0px 100px;
+    }
+    .WWA-WE {
+      .WWA-item {
+        margin: 0 10px;
+      }
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .WWA-intro {
+      font-size: 1.4em;
+      padding: 0px 100px;
+    }
+    .WWA-WE {
+      .WWA-item {
+        margin: 0 10px;
+      }
+      .WWA-team-founders,
+      .WWA-vps,
+      .WWA-tech,
+      .WWA-advisors,
+      .WWA-ambassadors {
+        transform: scale(0.9);
+      }
+      .WWA-team {
+        width: 100%;
+      }
+      .WWA-title {
+        font-size: 4rem;
+        margin: -10px 0;
+      }
+      .WWA-vps {
+        margin: -70px 0;
+      }
+    }
+    @media only screen and (max-width: 950px) {
+      .WWA-intro {
+        padding: 0;
+        font-size: 1.4rem;
+        width: 90%;
+        margin: 0 auto;
+      }
+      .WWA-WE {
+        .WWA-item {
+          margin: 30px 0px;
+        }
+        .WWA-title {
+          font-size: 2rem;
+        }
+        .WWA-team-founders {
+          margin-bottom: 0px;
+        }
+        .WWA-vps {
+          margin-bottom: 10px;
+        }
+        .WWA-advisors,
+        .WWA-ambassadors,
+        .WWA-team-founders,
+        .WWA-vps,
+        .WWA-tech {
+          margin-top: 0;
+          flex-direction: column;
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .WWA-intro {
+      padding: 0;
+      font-size: 1rem;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .WWA-WE {
+      .WWA-title {
+        font-size: 2rem;
+      }
+      .WWA-team-founders {
+        margin-bottom: 0px;
+      }
+      .WWA-vps {
+        margin-bottom: 10px;
+      }
+      .WWA-advisors,
+      .WWA-ambassadors,
+      .WWA-team-founders,
+      .WWA-vps,
+      .WWA-tech {
+        margin-top: 0;
+        flex-direction: column;
+        transform: scale(1);
+      }
+    }
+  }
+}

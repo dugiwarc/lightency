@@ -1,0 +1,30 @@
+.AMTContinent {
+  transform: translateY(50px);
+  position: relative;
+  min-width: 400px;
+  min-height: 400px;
+  object {
+    transform: scale(1.2);
+    position: absolute;
+    transition: all 0.3s ease-in;
+  }
+  .AMTContinent-locations {
+    position: absolute;
+    transition: all 1s ease-in;
+  }
+  img {
+    width: 400px;
+    height: 450px;
+  }
+  @media only screen and (max-width: 950px) {
+    transform: translate(50px, 35px);
+  }
+  @media only screen and (max-width: 450px) {
+    transform: translate(50px, 40px);
+    min-height: 500px;
+    margin-bottom: -50px;
+    .AMTContinent-locations {
+      display: none;
+    }
+  }
+}

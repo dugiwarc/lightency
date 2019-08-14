@@ -1,0 +1,52 @@
+.PowerChainBenefits {
+  min-height: 750px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  .PCB-title {
+    font-weight: bold;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-top: 50px;
+  }
+  .PCB-items {
+    display: flex;
+    height: 80%;
+    padding: 50px 0;
+    box-sizing: content-box;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  @media only screen and (max-width: 1200px) {
+    .PCB-items {
+      padding: 50px 0;
+      width: 80%;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .PCB-items {
+      width: 85%;
+    }
+  }
+  @media only screen and (max-width: 950px) {
+    .PCB-title {
+      font-size: 3rem;
+    }
+    .PCB-items {
+      height: 100%;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    min-height: 1600px;
+    margin: 50px 0;
+    .PCB-title {
+      font-size: 2rem;
+      padding: 0 15%;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}

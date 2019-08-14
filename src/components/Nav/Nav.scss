@@ -1,0 +1,24 @@
+.Nav {
+  z-index: 20;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  background: #202a43;
+  height: 100px;
+  box-shadow: 0 5px 6px -4px black;
+  a {
+    font-family: "Catamaran", sans-serif;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+  }
+  @media only screen and (max-width: 950px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+}

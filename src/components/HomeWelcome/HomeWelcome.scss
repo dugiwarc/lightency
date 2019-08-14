@@ -1,0 +1,61 @@
+$base-yellow: #ffde00;
+
+.Home-welcome {
+  height: 75vh;
+  min-height: 700px;
+  display: grid;
+  grid-template-columns: repeat(40, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  position: relative;
+  max-height: 75vh;
+  .Home-img {
+    overflow: hidden;
+    grid-area: 1/1/21/41;
+    max-height: 100%;
+    z-index: -1;
+    position: fixed;
+    &::before {
+      filter: brightness(0.4);
+      background-image: url("../../graphics/planet.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      will-change: transform;
+    }
+  }
+
+  @media only screen and (max-width: 1400px) {
+    min-height: 500px;
+    height: 70vh;
+  }
+  @media only screen and (max-width: 1200px) {
+    min-height: 625px;
+  }
+  @media only screen and (max-width: 1000px) {
+    min-height: 600px;
+    height: 67vh;
+  }
+
+  @media only screen and (max-width: 450px) {
+    height: 65vh;
+    min-height: 400px;
+    background-image: url("../../graphics/planet_400.jpg");
+
+    .Home-img {
+      overflow: hidden;
+      grid-area: 1/1/21/41;
+      max-height: 100%;
+      z-index: -1;
+      position: relative;
+      &::before {
+        background-image: none;
+        filter: none;
+      }
+    }
+  }
+}

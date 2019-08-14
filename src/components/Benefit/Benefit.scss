@@ -1,0 +1,49 @@
+.PCB-item {
+  height: 25%;
+  min-width: 40%;
+
+  .PCB-item-title {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  .PCB-item-desc {
+    font-weight: 100;
+    font-size: 1.5rem;
+    width: 80%;
+  }
+  img {
+    margin-left: 10px;
+    height: 35px;
+  }
+  @media only screen and (max-width: 1600px) {
+    width: 400px;
+  }
+  @media only screen and (max-width: 1400px) {
+    .PCB-item-title {
+      font-size: 2rem;
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    width: 375px;
+  }
+  @media only screen and (max-width: 1000px) {
+    .PCB-item-title {
+      font-size: 1.8rem;
+    }
+  }
+  @media only screen and (max-width: 950px) {
+    height: 150px;
+  }
+  @media only screen and (max-width: 450px) {
+    margin: 20px 0;
+    .PCB-item-title {
+      font-size: 1.8rem;
+    }
+    .PCB-item-desc {
+      width: 100%;
+    }
+    img {
+      height: 20px;
+    }
+  }
+}

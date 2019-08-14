@@ -1,0 +1,72 @@
+.Links {
+  grid-area: 5/12/7/19;
+  align-items: center;
+  display: flex;
+  width: 686px;
+  min-width: 686px;
+  justify-content: space-between;
+  position: relative;
+
+  .dropdown {
+    position: absolute;
+    width: 200px;
+    min-height: 120px;
+    font-size: 100%;
+    font-family: "Lato", sans-serif;
+    height: 120px;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    background: transparent;
+    top: 100px;
+    box-shadow: 0 1px black inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+    transform: translate(28px, -40px);
+    transition: opacity 1s ease-in-out;
+    color: white;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: flex-start;
+    z-index: 10;
+    animation: float-dropdown 3s ease-in-out infinite;
+    a {
+      margin-left: 15px;
+    }
+  }
+  a:hover {
+    color: #ffde00;
+    transition: all 0.3s ease-in-out;
+  }
+
+  @keyframes float-dropdown {
+    0% {
+      transform: translate(28px, -40px);
+    }
+    50% {
+      transform: translate(28px, -42px);
+    }
+    100% {
+      transform: translate(28px, -40px);
+    }
+  }
+
+  @media only screen and (max-width: 1600px) {
+    grid-area: 5/10/7/19;
+  }
+  @media only screen and (max-width: 1400px) {
+    grid-area: 5/9/7/13;
+  }
+  @media only screen and (max-width: 1200px) {
+    grid-area: 5/8/7/12;
+  }
+  @media only screen and (max-width: 1100px) {
+    grid-area: 5/7/7/12;
+  }
+  @media only screen and (max-width: 1000px) {
+    grid-area: 5/6/7/12;
+  }
+  @media only screen and (max-width: 950px) {
+    display: none;
+  }
+}

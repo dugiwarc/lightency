@@ -1,0 +1,93 @@
+.EnergyTrading {
+  width: 100%;
+  min-height: 800px;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  .ETAnimation {
+    width: 1400px;
+    min-width: 1400px;
+    transform: scale(0.9);
+    height: 800px;
+    min-height: 800px;
+    background: url("../../graphics/Lightency_dark_opt.svg");
+    animation: sprite-animation 4s steps(8) infinite;
+  }
+  @-webkit-keyframes sprite-animation {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -11200px 0;
+    }
+  }
+  @keyframes sprite-animation {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -11200px 0;
+    }
+  }
+
+  @media only screen and (max-width: 1400px) {
+    .ETAnimation {
+      transform: scale(0.8);
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    min-height: 650px;
+    .ETAnimation {
+      transform: scale(0.7);
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .ETAnimation {
+      transform: scale(0.6);
+    }
+  }
+  @media only screen and (max-width: 950px) {
+    width: 100%;
+    margin: -100px 0;
+    .ETAnimation {
+      transform: scale(0.5);
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    .ETAnimation {
+      transform: scale(0.45);
+    }
+  }
+
+  @media only screen and (max-width: 650px) {
+    .ETAnimation {
+      transform: scale(0.35);
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+    margin: -190px 0px;
+    .ETAnimation {
+      transform: scale(0.3);
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    width: 100%;
+    margin: -190px 0px;
+    .ETAnimation {
+      transform: scale(0.25);
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    width: 100%;
+    margin: -190px 0px;
+    .ETAnimation {
+      transform: scale(0.2);
+    }
+  }
+}

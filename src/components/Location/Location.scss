@@ -1,0 +1,76 @@
+.location {
+  background-color: #ffde00;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 8px #ffde00, inset 0 0 8px #ffde00;
+  animation: pulse 2s linear 1s infinite;
+}
+.location-tunisia {
+  transform: translate(105px, -30px);
+}
+.location-mali {
+  transform: translate(48px, 48px);
+}
+.location-senegal {
+  transform: translate(-30px, 56px);
+}
+.location-tanzania {
+  transform: translate(232px, 125px);
+}
+.location-uganda {
+  transform: translate(223px, 107px);
+}
+.location-kenya {
+  transform: translate(249px, 102px);
+}
+.location-burkinaFaso {
+  transform: translate(36px, 59px);
+}
+.info {
+  width: 450px;
+  padding: 15px;
+  font-weight: 100;
+  box-sizing: border-box;
+  background: black;
+  color: white;
+  position: absolute;
+}
+.info-burkinaFaso {
+  transform: translate(48px, 59px);
+}
+
+.info-kenya {
+  transform: translate(261px, -40px);
+}
+
+.info-tunisia {
+  transform: translate(117px, -29px);
+}
+
+.info-tanzania {
+  transform: translate(246px, 126px);
+}
+
+.info-uganda {
+  transform: translate(235px, -34px);
+}
+
+.info-senegal {
+  transform: translate(-16px, 56px);
+}
+.info-mali {
+  transform: translate(62px, 49px);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 8px #ffde00, inset 0 0 8px #ffde00;
+  }
+  50% {
+    box-shadow: 0 0 16px #ffde00, inset 0 0 14px #ffde00;
+  }
+  100% {
+    box-shadow: 0 0 8px #ffde00, inset 0 0 8px #ffde00;
+  }
+}

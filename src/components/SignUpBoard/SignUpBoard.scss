@@ -1,0 +1,100 @@
+.SU-board {
+  position: absolute;
+  z-index: -100;
+  background-color: #202b43;
+  width: 350px;
+  height: 400px;
+  top: 15%;
+  display: flex;
+  transform-origin: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: -400px;
+  transition: left 0.3s ease-in;
+  box-sizing: content-box;
+  padding: 25px 0;
+  transition: all 0.3s ease-in-out;
+  input {
+    border: none;
+    border-radius: 0;
+    min-height: 30px;
+    width: 100%;
+    align-self: center;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+  .board-title {
+    margin-bottom: 10px;
+    color: white;
+    background: gold;
+    font-weight: bold;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px;
+  }
+  .board-subtitle {
+    width: 84%;
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  .board-subscribe {
+    background-color: #ffde00;
+    width: 150px;
+    border: 0;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .board-subscribe {
+    position: relative;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  }
+  .board-subscribe:before,
+  .board-subscribe:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 50%;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    border-radius: 100px / 10px;
+  }
+  .board-subscribe:after {
+    right: 10px;
+    left: auto;
+    transform: skew(8deg) rotate(3deg);
+  }
+
+  .board-subscribe:hover {
+    transition: all 0.5s ease-in-out;
+    background-color: black;
+    color: #ffde00;
+  }
+  .board-input-item {
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    label {
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+  }
+  @media only screen and (max-width: 1600px) {
+    top: 17%;
+  }
+}

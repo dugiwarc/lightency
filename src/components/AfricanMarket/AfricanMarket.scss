@@ -1,0 +1,47 @@
+$base-white: #ffffff;
+$base-blue: #202a43;
+$base-gold: #ffde00;
+.AfricanMarket {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-self: center;
+  align-items: center;
+  background: $base-blue;
+  color: $base-white;
+  width: 100vw;
+  .AMTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+    min-height: 150px;
+  }
+  .AMImgAndSolutions {
+    display: flex;
+    min-height: 400px;
+  }
+
+  @media only screen and (max-width: 950px) {
+    .AMImgAndSolutions {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  @media only screen and (max-width: 750px) {
+    .AMTitle {
+      font-size: 2.5rem;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .AMTitle {
+      font-size: 2rem;
+      width: 90%;
+      text-align: center;
+    }
+  }
+}

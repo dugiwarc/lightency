@@ -1,0 +1,76 @@
+.GetInTouch {
+  height: 85vh;
+  min-height: 800px;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  background: #efefefff;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  form {
+    height: 500px;
+    width: 400px;
+  }
+  form div {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    font-size: 1.3rem;
+  }
+  textarea {
+    height: 200px;
+    border: none;
+    resize: none;
+    box-sizing: border-box;
+    padding: 10px;
+    outline: none;
+  }
+  button {
+    border: 0;
+    background: #202a43;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    width: 100%;
+    margin-top: 10px;
+    text-transform: uppercase;
+    padding: 10px 50px;
+  }
+  button:hover {
+    background: black;
+    color: #ffde00;
+    transition: all 0.3s ease-in-out;
+  }
+  input {
+    height: 30px;
+    border: 0;
+    box-sizing: border-box;
+    padding: 0 10px;
+    border-radius: 0px;
+  }
+  h1 {
+    font-size: 4.9rem;
+    text-align: center;
+  }
+  @media only screen and (max-width: 450px) {
+    min-height: 550px;
+    height: 90vh;
+    form {
+      width: 80%;
+      h1 {
+        font-size: 3rem;
+      }
+      textarea {
+        height: 100px;
+      }
+      label {
+        font-size: 1rem;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
