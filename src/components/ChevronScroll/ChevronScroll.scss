@@ -79,4 +79,9 @@
       transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
     }
   }
+  @media only screen and (max-width: 1400px) {
+    .container {
+      transform: translateY(50px);
+    }
+  }
 }

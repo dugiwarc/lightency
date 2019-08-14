@@ -20,7 +20,7 @@ class ChevronScroll extends React.Component {
           <div className="chevron" />
           <div className="chevron" />
           <div className="chevron" />
-          <span class="text">Scroll down</span>
+          <span className="text">Scroll down</span>
         </div>
       </div>
     );
