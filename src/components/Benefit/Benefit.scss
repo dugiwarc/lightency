@@ -1,49 +1,117 @@
 .PCB-item {
   height: 25%;
   min-width: 40%;
-
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 5%;
+  width: 500px;
+  margin: 25px 0;
+  .PCB-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .PCB-item-title {
     font-size: 3rem;
     font-weight: 500;
   }
   .PCB-item-desc {
     font-weight: 100;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     width: 80%;
   }
   img {
-    margin-left: 10px;
-    height: 35px;
+    height: 120px;
   }
   @media only screen and (max-width: 1600px) {
-    width: 400px;
+    img {
+      height: 100px;
+    }
+    .PCB-item-title {
+      font-size: 2.8rem;
+    }
+    .PCB-item-desc {
+      font-size: 1.6rem;
+    }
   }
   @media only screen and (max-width: 1400px) {
     .PCB-item-title {
-      font-size: 2rem;
+      font-size: 2.3rem;
+    }
+    .PCB-item-desc {
+      font-size: 1.4rem;
     }
   }
   @media only screen and (max-width: 1200px) {
-    width: 375px;
+    width: 90%;
+    .PCB-item-title {
+      font-size: 3rem;
+    }
+    .PCB-item-desc {
+      font-size: 2rem;
+    }
   }
   @media only screen and (max-width: 1000px) {
     .PCB-item-title {
-      font-size: 1.8rem;
+      font-size: 2.5rem;
     }
   }
   @media only screen and (max-width: 950px) {
     height: 150px;
-  }
-  @media only screen and (max-width: 450px) {
-    margin: 20px 0;
+    .PCB-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
     .PCB-item-title {
-      font-size: 1.8rem;
+      font-size: 2.3rem;
     }
     .PCB-item-desc {
       width: 100%;
+      font-size: 1.6rem;
     }
     img {
-      height: 20px;
+      height: 125px;
+    }
+  }
+  @media only screen and (max-width: 650px) {
+    height: 100px;
+    .PCB-item-title {
+      font-size: 2rem;
+    }
+    .PCB-item-desc {
+      width: 100%;
+      font-size: 1.5rem;
+    }
+    img {
+      height: 100px;
+    }
+  }
+  @media only screen and (max-width: 550px) {
+    .PCB-item-title {
+      font-size: 1.7rem;
+    }
+    .PCB-item-desc {
+      width: 100%;
+      font-size: 1.2rem;
+    }
+    img {
+      height: 60px;
+    }
+  }
+  @media only screen and (max-width: 550px) {
+    min-height: 70px;
+    margin: 10px 0;
+    .PCB-item-title {
+      font-size: 1.5rem;
+    }
+    .PCB-item-desc {
+      width: 100%;
+      font-size: 1.1rem;
+    }
+    img {
+      height: 60px;
     }
   }
 }

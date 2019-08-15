@@ -1,16 +1,17 @@
 import React from "react";
-import accept from "../../graphics/accept.png";
 
 import "./Benefit.scss";
 
-const Benefit = ({ title, desc }) => {
+const Benefit = ({ title, desc, image }) => {
   return (
     <div className="PCB-item">
-      <div className="PCB-item-title">
-        {title}
-        <img src={accept} alt="accept" />
+      <div className="PCB-image">
+        <img src={image} alt="accept" />
       </div>
-      <div className="PCB-item-desc">{desc}</div>
+      <div className="PCB-text">
+        <div className="PCB-item-title">{title}</div>
+        <div className="PCB-item-desc">{desc}</div>
+      </div>
     </div>
   );
 };

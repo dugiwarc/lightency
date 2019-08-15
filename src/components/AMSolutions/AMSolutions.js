@@ -22,7 +22,7 @@ const AMSolutions = () => {
       <div className="AMSolutions-item">
         {" "}
         <div className="AMSolutions-item-title">
-          MARKET MATURITY
+          <div>MARKET MATURITY</div>
           <img src={accept} alt="slide" />
         </div>
         <div className="AMSolutions-item-desc">

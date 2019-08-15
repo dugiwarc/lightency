@@ -16,6 +16,7 @@ const SSGroups = () => {
             concernTitle={item.title}
             concernSTitle={item.subtitle}
             solutionSTitle={item.solution}
+            image={item.icon}
           />
         );
       })}

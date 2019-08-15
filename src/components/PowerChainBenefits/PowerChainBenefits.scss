@@ -10,6 +10,7 @@
     font-size: 4rem;
     text-transform: uppercase;
     margin-top: 50px;
+    text-align: center;
   }
   .PCB-items {
     display: flex;
@@ -40,8 +41,7 @@
     }
   }
   @media only screen and (max-width: 450px) {
-    min-height: 1600px;
-    margin: 50px 0;
+    min-height: 1250px;
     .PCB-title {
       font-size: 2rem;
       padding: 0 15%;
