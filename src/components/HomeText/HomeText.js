@@ -44,7 +44,7 @@ const HomeText = () => {
           <HomeButton text="Watch video" />
         </div>
         <div className="Home-text-button-right">
-          <HomeButton text="Join us" />
+          <HomeButton text="Join us" joinUs />
         </div>
       </div>
     </div>

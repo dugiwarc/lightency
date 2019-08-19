@@ -10,10 +10,9 @@ import "./HomeButton.scss";
 
 class HomeButton extends Component {
   render() {
-    const { text, showSignUp, toggleBackground } = this.props;
+    const { text, showSignUp, toggleBackground, joinUs } = this.props;
     const handleClick = () => {
-      showSignUp();
-      toggleBackground();
+      joinUs && showSignUp() && toggleBackground();
     };
     return (
       <div className="button_base Home-button" onClick={handleClick}>
@@ -24,11 +23,6 @@ class HomeButton extends Component {
     );
   }
 }
-
-// const mapDispatchToProps = dispatch => ({
-//   showSignUp: () => dispatch(showSignUp()),
-//   toggleBackground: () => dispatch(toggleBackground())
-// });
 
 export default connect(
   null,
