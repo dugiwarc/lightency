@@ -7,14 +7,18 @@ import "./HamburgerLinks.scss";
 
 // Actions
 import { toggleBackground } from "../../redux/background/background.actions";
-import { toggleHamburgerMenu } from "../../redux/hamburger-menu/hamburger-menu.actions";
+import {
+  toggleHamburgerMenu,
+  hideHamburgerMenu
+} from "../../redux/hamburger-menu/hamburger-menu.actions";
 
 class HamburgerLinks extends Component {
   render() {
     const {
       hamburgerMenuIsHidden,
       toggleBackground,
-      toggleHamburgerMenu
+      toggleHamburgerMenu,
+      hideHamburgerMenu
     } = this.props;
     const menuStyles = {
       visibility: !hamburgerMenuIsHidden ? "visible" : "hidden",
@@ -60,10 +64,8 @@ class HamburgerLinks extends Component {
               <Link
                 to="/"
                 onClick={() => {
-                  this.props.handleHamburger(true);
-                  this.setState({
-                    isClicked: false
-                  });
+                  hideHamburgerMenu();
+                  toggleBackground();
                 }}
               >
                 HOME
@@ -73,10 +75,8 @@ class HamburgerLinks extends Component {
               <Link
                 to="/partners/"
                 onClick={() => {
-                  this.props.handleHamburger(true);
-                  this.setState({
-                    isClicked: false
-                  });
+                  hideHamburgerMenu();
+                  toggleBackground();
                 }}
               >
                 PARTNERS
@@ -86,10 +86,8 @@ class HamburgerLinks extends Component {
               <Link
                 to="/about-us/"
                 onClick={() => {
-                  this.props.handleHamburger(true);
-                  this.setState({
-                    isClicked: false
-                  });
+                  hideHamburgerMenu();
+                  toggleBackground();
                 }}
               >
                 WHO WE ARE
@@ -99,10 +97,8 @@ class HamburgerLinks extends Component {
               <Link
                 to="/roadmap/"
                 onClick={() => {
-                  this.props.handleHamburger(true);
-                  this.setState({
-                    isClicked: false
-                  });
+                  hideHamburgerMenu();
+                  toggleBackground();
                 }}
               >
                 ROADMAP
@@ -112,10 +108,8 @@ class HamburgerLinks extends Component {
               <Link
                 to="/our-solution/"
                 onClick={() => {
-                  this.props.handleHamburger(true);
-                  this.setState({
-                    isClicked: false
-                  });
+                  hideHamburgerMenu();
+                  toggleBackground();
                 }}
               >
                 OUR SOLUTION
@@ -125,10 +119,8 @@ class HamburgerLinks extends Component {
               <Link
                 to="/ressources/"
                 onClick={() => {
-                  this.props.handleHamburger(true);
-                  this.setState({
-                    isClicked: false
-                  });
+                  hideHamburgerMenu();
+                  toggleBackground();
                 }}
               >
                 RESSOURCES
@@ -138,10 +130,8 @@ class HamburgerLinks extends Component {
               <Link
                 to="/blog/"
                 onClick={() => {
-                  this.props.handleHamburger(true);
-                  this.setState({
-                    isClicked: false
-                  });
+                  hideHamburgerMenu();
+                  toggleBackground();
                 }}
               >
                 BLOG
@@ -151,10 +141,8 @@ class HamburgerLinks extends Component {
               <Link
                 to="/get-in-touch/"
                 onClick={() => {
-                  this.props.handleHamburger(true);
-                  this.setState({
-                    isClicked: false
-                  });
+                  hideHamburgerMenu();
+                  toggleBackground();
                 }}
               >
                 GET IN TOUCH
@@ -175,5 +163,5 @@ const mapStateToProps = ({
 
 export default connect(
   mapStateToProps,
-  { toggleBackground, toggleHamburgerMenu }
+  { toggleBackground, toggleHamburgerMenu, hideHamburgerMenu }
 )(HamburgerLinks);
