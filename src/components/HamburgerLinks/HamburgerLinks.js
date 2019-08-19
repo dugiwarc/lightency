@@ -15,53 +15,25 @@ import {
 // Data
 import hamburgerLinks from "../../data/hamburger.data";
 
+// Components
+import HamburgerIcon from "../HamburgerIcon/HamburgerIcon";
+
 class HamburgerLinks extends Component {
   render() {
     const {
       hamburgerMenuIsHidden,
       toggleBackground,
-      toggleHamburgerMenu,
       hideHamburgerMenu
     } = this.props;
-    const menuStyles = {
-      visibility: !hamburgerMenuIsHidden ? "visible" : "hidden",
-      opacity: !hamburgerMenuIsHidden ? "1" : "0",
-      transition: "opacity .4s ease-in-out"
-    };
-    const bar_1 = {
-      background: !hamburgerMenuIsHidden ? "gold" : "white",
-      transform: !hamburgerMenuIsHidden
-        ? "translateY(15px) rotate(45deg)"
-        : "rotate(0deg)",
-      transition: "all .3s ease-in-out"
-    };
-    const bar_2 = {
-      background: !hamburgerMenuIsHidden ? "transparent" : "white",
-      transition: "all .3s ease-in-out"
-    };
 
-    const bar_3 = {
-      background: !hamburgerMenuIsHidden ? "gold" : "white",
-      transform: !hamburgerMenuIsHidden
-        ? "translateY(-15px) rotate(135deg)"
-        : "rotate(0deg)",
-      transition: "all .3s ease-in-out"
+    const menuStyles = {
+      visibility: !hamburgerMenuIsHidden ? "visible" : "hidden"
     };
 
     return (
       <div className="Hamburger">
         <div className="Hamburger-links">
-          <div
-            className="Hamburger-icon"
-            onClick={() => {
-              toggleHamburgerMenu();
-              toggleBackground();
-            }}
-          >
-            <div className="Hamburger-bar" style={bar_1} />
-            <div className="Hamburger-bar" style={bar_2} />
-            <div className="Hamburger-bar" style={bar_3} />
-          </div>
+          <HamburgerIcon />
           <div className="Hamburger-menu" style={menuStyles}>
             {hamburgerLinks.map(link => {
               return (

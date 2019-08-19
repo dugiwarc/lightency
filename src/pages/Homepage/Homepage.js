@@ -15,39 +15,38 @@ import Contact from "../../components/Contact/Contact";
 import "./Homepage.scss";
 
 // Actions
-import { updateYPosition } from "../../redux/scroll/scroll.actions";
+import {
+  updateYPosition,
+  makeSSVisible,
+  makeWWDVisible
+} from "../../redux/scroll/scroll.actions";
 
 class Homepage extends React.Component {
-  state = {
-    solutionSectionIsReached: false,
-    whatWeDoSectionIsReached: false
-  };
   componentDidMount() {
-    const { updateYPosition } = this.props;
     window.scrollTo(0, 0);
-    window.addEventListener("scroll", event => {
-      console.log(window.scrollY);
+    const {
+      updateYPosition,
+      makeSSVisible,
+      makeWWDVisible,
+      solutionSectionIsVisible,
+      whatWeDoSectionIsVisible
+    } = this.props;
+
+    window.addEventListener("scroll", () => {
       updateYPosition(window.scrollY);
-      window.scrollY > 50 &&
-        !this.state.solutionSectionIsReached &&
-        this.setState({ solutionSectionIsReached: true });
-      window.scrollY > 750 &&
-        !this.state.whatWeDoSectionIsReached &&
-        this.setState({
-          whatWeDoSectionIsReached: true
-        });
+      !solutionSectionIsVisible && window.scrollY > 50 && makeSSVisible();
+      !whatWeDoSectionIsVisible && window.scrollY > 750 && makeWWDVisible();
     });
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", () => console.log("event removed"));
   }
   render() {
-    const { solutionSectionIsReached, whatWeDoSectionIsReached } = this.state;
     return (
       <div className="Homepage">
         <HomeWelcome />
-        <SolutionSection isVisible={solutionSectionIsReached} />
-        <WhatWeDoSection isVisible={whatWeDoSectionIsReached} />
+        <SolutionSection />
+        <WhatWeDoSection />
         <SliderSection />
         <AfricanMarket />
         <EnergyTrading />
@@ -58,7 +57,14 @@ class Homepage extends React.Component {
   }
 }
 
+const mapStateToProps = ({
+  scrollState: { solutionSectionIsVisible, WhatWeDoSectionIsVisible }
+}) => ({
+  solutionSectionIsVisible,
+  WhatWeDoSectionIsVisible
+});
+
 export default connect(
-  null,
-  { updateYPosition }
+  mapStateToProps,
+  { updateYPosition, makeSSVisible, makeWWDVisible }
 )(Homepage);

@@ -1,25 +1,31 @@
 import React from "react";
+import { connect } from "react-redux";
+
+// Components
 import WWDTextGroup from "../WWDTextGroup/WWDTextGroup";
 
+// Styles
 import "./WhatWeDoSection.scss";
 
+// Data
 import data from "../../data/whatwedo.data";
 
+// Utils
 import consoleText from "../../utils/terminalEffect";
 
 class WhatWeDoSection extends React.Component {
-  state = { isVisible: false };
   componentDidUpdate() {
-    console.log(this.props);
-    this.props.isVisible && consoleText(["What We Do"], "text", ["white"]);
+    this.props.whatWeDoIsVisible &&
+      consoleText(["What We Do"], "text", ["white"]);
   }
+
   render() {
-    const { isVisible } = this.props;
+    const { whatWeDoIsVisible } = this.props;
     const styleTitle = {
-      display: isVisible ? "block" : "none"
+      display: whatWeDoIsVisible && "block"
     };
     return (
-      <div className="WhatWeDo">
+      <div className="WhatWeDo" id="WWD">
         <div className="WWD-filter" />
         <div className="WWD-text">
           <div className="WWD-text-title" style={styleTitle}>
@@ -43,4 +49,11 @@ class WhatWeDoSection extends React.Component {
   }
 }
 
-export default WhatWeDoSection;
+const mapStateToProps = ({ scrollState: { whatWeDoIsVisible } }) => ({
+  whatWeDoIsVisible
+});
+
+export default connect(
+  mapStateToProps,
+  null
+)(WhatWeDoSection);

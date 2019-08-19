@@ -10,7 +10,7 @@ export const hideSignUp = yCoordinate => ({
 });
 
 export const signUp = () => ({
-  type: signUpTypes.SIGN_UP
+  type: signUpTypes.SIGN_UP_ACTION
 });
 
 export const resetSignUp = () => ({

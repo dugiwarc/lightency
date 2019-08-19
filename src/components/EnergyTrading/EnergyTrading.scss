@@ -52,19 +52,19 @@
     width: 100%;
     margin: -100px 0;
     .ETAnimation {
-      transform: scale(0.5);
+      transform: scale(0.55);
     }
   }
 
   @media only screen and (max-width: 750px) {
     .ETAnimation {
-      transform: scale(0.45);
+      transform: scale(0.5);
     }
   }
 
   @media only screen and (max-width: 650px) {
     .ETAnimation {
-      transform: scale(0.35);
+      transform: scale(0.4);
     }
   }
 

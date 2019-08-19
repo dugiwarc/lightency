@@ -6,3 +6,15 @@ export const updateYPosition = yPosition => dispatch => {
     payload: yPosition
   });
 };
+
+export const makeWWDVisible = () => dispatch => {
+  dispatch({
+    type: scrollTypes.MAKE_WWD_VISIBLE
+  });
+};
+
+export const makeSSVisible = () => dispatch => {
+  dispatch({
+    type: scrollTypes.MAKE_SS_VISIBLE
+  });
+};

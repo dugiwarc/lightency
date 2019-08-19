@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { connect } from "react-redux";
 
 // Components
 import SSGroups from "../SSGroups/SSGroups";
@@ -9,21 +10,24 @@ import "./SolutionSection.scss";
 
 class SolutionSection extends React.Component {
   render() {
-    const { isVisible } = this.props;
+    const { solutionSectionIsVisible } = this.props;
     const componentStyle = {
-      opacity: isVisible ? "1" : "0",
+      opacity: solutionSectionIsVisible ? "1" : "0",
       transition: "all 0.5s ease-in",
-      transform: isVisible ? "translateY(0px)" : "translateY(100px)"
+      transform: solutionSectionIsVisible
+        ? "translateY(0px)"
+        : "translateY(100px)"
     };
     return (
       <Fragment>
-        <ChevronScroll isVisible={isVisible} />
-        <section className="SolutionSection" style={componentStyle}>
+        <ChevronScroll isVisible={solutionSectionIsVisible} />
+        <section className="SolutionSection" style={componentStyle} id="SS">
           <div className="SS-title">
             <p>
               The{" "}
               <span
-                className={`text-gold ${isVisible && "text-flicker-in-glow"}`}
+                className={`text-gold ${solutionSectionIsVisible &&
+                  "text-flicker-in-glow"}`}
               >
                 Lightency
               </span>{" "}
@@ -38,4 +42,11 @@ class SolutionSection extends React.Component {
   }
 }
 
-export default SolutionSection;
+const mapStateToProps = ({ scrollState: { solutionSectionIsVisible } }) => ({
+  solutionSectionIsVisible
+});
+
+export default connect(
+  mapStateToProps,
+  null
+)(SolutionSection);

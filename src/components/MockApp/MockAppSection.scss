@@ -1,10 +1,12 @@
+$base-gold: #ffde00;
+$base-blue: #202a43;
+
 .MockApp {
   display: flex;
   width: 100%;
   min-height: 900px;
-  background: #202a43;
+  background: $base-blue;
   flex-direction: column-reverse;
-  color: white;
   .MA-text {
     flex-basis: 50%;
     display: flex;
@@ -16,20 +18,19 @@
     }
     .MA-title {
       font-size: 3rem;
+      color: $base-gold;
       font-weight: bold;
-      color: white;
       width: 50px;
       text-transform: uppercase;
     }
     .MA-desc {
       font-weight: 100;
       font-size: 1.5rem;
+      color: white;
     }
   }
   .MA-img {
     flex-basis: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +91,6 @@
     .MA-text {
       .MA-item {
         .MA-title {
-          color: #ffde00;
           text-align: start;
         }
         .MA-desc {
