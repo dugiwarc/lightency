@@ -3,21 +3,34 @@ import { connect } from "react-redux";
 
 // Actions
 import { toggleBackground } from "../../redux/background/background.actions";
-import { toggleSignUp } from "../../redux/signupboard/signup.actions";
+import {
+  hideSignUp,
+  signUp,
+  resetSignUp
+} from "../../redux/signupboard/signup.actions";
+import { hideHamburgerMenu } from "../../redux/hamburger-menu/hamburger-menu.actions";
 
 // Styles
 import "./BackgroundFiller.scss";
 
 class BackgroundFiller extends Component {
   render() {
-    const { hidden, toggleBackground, toggleSignUp } = this.props;
+    const {
+      backgroundFillerIsHidden,
+      toggleBackground,
+      resetSignUp,
+      hideHamburgerMenu,
+      hideSignUp
+    } = this.props;
     const backgroundFillerSyles = {
-      zIndex: hidden ? "-999" : "999",
-      opacity: hidden ? "0" : "1"
+      zIndex: backgroundFillerIsHidden ? "-999" : "10",
+      opacity: backgroundFillerIsHidden ? "0" : "1"
     };
     const handleClick = () => {
       toggleBackground();
-      toggleSignUp();
+      hideHamburgerMenu();
+      hideSignUp();
+      resetSignUp();
     };
     return (
       <div
@@ -29,16 +42,17 @@ class BackgroundFiller extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  toggleBackground: () => dispatch(toggleBackground()),
-  toggleSignUp: () => dispatch(toggleSignUp())
-});
-
-const mapStateToProps = ({ backgroundState: { hidden } }) => ({
-  hidden
+const mapStateToProps = ({
+  backgroundState: { backgroundFillerIsHidden },
+  signUpState: { hasSignedUp },
+  hamburgerMenuState: { hamburgerMenuIsHidden }
+}) => ({
+  backgroundFillerIsHidden,
+  hasSignedUp,
+  hamburgerMenuIsHidden
 });
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  { toggleBackground, hideSignUp, signUp, resetSignUp, hideHamburgerMenu }
 )(BackgroundFiller);

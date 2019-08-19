@@ -5,7 +5,6 @@ const initialState = {
 };
 
 const scrollReducer = (state = initialState, action) => {
-  console.log("ACTION", action);
   switch (action.type) {
     case scrollTypes.UPDATE_Y_POSITION:
       return {

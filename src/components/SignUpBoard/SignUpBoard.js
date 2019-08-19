@@ -4,12 +4,21 @@ import { connect } from "react-redux";
 // Styles
 import "./SignUpBoard.scss";
 
+// Actions
+import { signUp } from "../../redux/signupboard/signup.actions";
+
 class SignUpBoard extends React.Component {
+  state = { isLoading: false };
   render() {
-    const { signUpIsHidden } = this.props;
+    const { isLoading } = this.state;
+    const { signUpIsHidden, hasSignedUp, signUp } = this.props;
     const boardStyle = {
       zIndex: signUpIsHidden ? "-1000" : "1000",
       left: !signUpIsHidden && "calc(85% - 320px)"
+    };
+    const thankYouStyle = {
+      transform: isLoading && "translateY(-1px)",
+      transition: "all 1s ease-in-out"
     };
     return (
       <div style={boardStyle} className="SU-board">
@@ -30,17 +39,43 @@ class SignUpBoard extends React.Component {
           <label htmlFor="email">Email*</label>
           <input type="email" id="email" placeholder="Email" />
         </div>
-        <div className="board-subscribe">Subscribe</div>
+        <button
+          className="board-subscribe"
+          onClick={() => {
+            signUp();
+            this.setState({ isLoading: true });
+            setTimeout(() => {
+              this.setState({ isLoading: false });
+            }, 1000);
+          }}
+          disabled={isLoading || (hasSignedUp && true)}
+        >
+          {!hasSignedUp ? (
+            "Sign Up"
+          ) : isLoading ? (
+            <div className="lds-ellipsis">
+              <div />
+              <div />
+              <div />
+              <div />
+            </div>
+          ) : (
+            <div style={thankYouStyle} className="thankyou">
+              Subscribed!
+            </div>
+          )}
+        </button>
       </div>
     );
   }
 }
 
-const mapStateToProps = ({ signUpState: { signUpIsHidden } }) => ({
-  signUpIsHidden
+const mapStateToProps = ({ signUpState: { signUpIsHidden, hasSignedUp } }) => ({
+  signUpIsHidden,
+  hasSignedUp
 });
 
 export default connect(
   mapStateToProps,
-  null
+  { signUp }
 )(SignUpBoard);

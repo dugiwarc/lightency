@@ -14,11 +14,13 @@ import { users } from "./data/users.data";
 import articles from "./data/articles.data";
 import ArticlePage from "./pages/Article/ArticlePage";
 import Footer from "./components/Footer/Footer";
+import BackgroundFiller from "./components/BackgroundFiller/BackgroundFiller";
 
 function AppRouter() {
   return (
     <Router>
       <div className="App">
+        <BackgroundFiller />
         <Nav />
         <Route path="/" exact component={Homepage} />
         <Route path="/our-solution/" component={OurSolution} />

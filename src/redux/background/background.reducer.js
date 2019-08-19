@@ -1,7 +1,7 @@
 import backgroundTypes from "./background.types";
 
 const initialState = {
-  hidden: true
+  backgroundFillerIsHidden: true
 };
 
 const backgroundReducer = (state = initialState, action) => {
@@ -9,7 +9,7 @@ const backgroundReducer = (state = initialState, action) => {
     case backgroundTypes.TOGGLE_BACKGROUND:
       return {
         ...state,
-        hidden: !state.hidden
+        backgroundFillerIsHidden: !state.backgroundFillerIsHidden
       };
     default:
       return state;

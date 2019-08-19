@@ -1,0 +1,7 @@
+const hamburgerMenuTypes = {
+  SHOW_HAMBURGER_MENU: "SHOW_HAMBURGER_MENU",
+  HIDE_HAMBURGER_MENU: "HIDE_HAMBURGER_MENU",
+  TOGGLE_HAMBURGER_MENU: "TOGGLE_HAMBURGER_MENU"
+};
+
+export default hamburgerMenuTypes;

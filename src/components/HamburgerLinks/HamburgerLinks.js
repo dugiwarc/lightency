@@ -1,31 +1,41 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
+// Styles
 import "./HamburgerLinks.scss";
 
-export default class HamburgerLinks extends Component {
-  state = { isClicked: false, isMenuActive: false };
+// Actions
+import { toggleBackground } from "../../redux/background/background.actions";
+import { toggleHamburgerMenu } from "../../redux/hamburger-menu/hamburger-menu.actions";
+
+class HamburgerLinks extends Component {
   render() {
+    const {
+      hamburgerMenuIsHidden,
+      toggleBackground,
+      toggleHamburgerMenu
+    } = this.props;
     const menuStyles = {
-      visibility: this.state.isClicked ? "visible" : "hidden",
-      opacity: this.state.isClicked ? "1" : "0",
+      visibility: !hamburgerMenuIsHidden ? "visible" : "hidden",
+      opacity: !hamburgerMenuIsHidden ? "1" : "0",
       transition: "opacity .4s ease-in-out"
     };
     const bar_1 = {
-      background: this.state.isClicked ? "gold" : "white",
-      transform: this.state.isClicked
+      background: !hamburgerMenuIsHidden ? "gold" : "white",
+      transform: !hamburgerMenuIsHidden
         ? "translateY(15px) rotate(45deg)"
         : "rotate(0deg)",
       transition: "all .3s ease-in-out"
     };
     const bar_2 = {
-      background: this.state.isClicked ? "transparent" : "white",
+      background: !hamburgerMenuIsHidden ? "transparent" : "white",
       transition: "all .3s ease-in-out"
     };
 
     const bar_3 = {
-      background: this.state.isClicked ? "gold" : "white",
-      transform: this.state.isClicked
+      background: !hamburgerMenuIsHidden ? "gold" : "white",
+      transform: !hamburgerMenuIsHidden
         ? "translateY(-15px) rotate(135deg)"
         : "rotate(0deg)",
       transition: "all .3s ease-in-out"
@@ -37,13 +47,8 @@ export default class HamburgerLinks extends Component {
           <div
             className="Hamburger-icon"
             onClick={() => {
-              this.setState(
-                {
-                  isClicked: this.state.isMenuActive ? false : true,
-                  isMenuActive: this.state.isMenuActive ? false : true
-                },
-                this.props.handleHamburger(this.state.isMenuActive)
-              );
+              toggleHamburgerMenu();
+              toggleBackground();
             }}
           >
             <div className="Hamburger-bar" style={bar_1} />
@@ -161,3 +166,14 @@ export default class HamburgerLinks extends Component {
     );
   }
 }
+
+const mapStateToProps = ({
+  hamburgerMenuState: { hamburgerMenuIsHidden }
+}) => ({
+  hamburgerMenuIsHidden
+});
+
+export default connect(
+  mapStateToProps,
+  { toggleBackground, toggleHamburgerMenu }
+)(HamburgerLinks);

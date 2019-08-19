@@ -36,9 +36,11 @@ $base-gold: #ffde00;
       .AMSolutions-item-desc {
         width: 100%;
         font-size: 1.3rem;
+        text-align: left;
       }
       img {
         height: 35px;
+        display: none;
       }
     }
   }
@@ -46,6 +48,7 @@ $base-gold: #ffde00;
     .AMSolutions-item {
       .AMSolutions-item-title {
         font-size: 2rem;
+        text-align: left;
       }
       .AMSolutions-item-desc {
         font-size: 1rem;
