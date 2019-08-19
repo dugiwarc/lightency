@@ -12,6 +12,9 @@ import {
   hideHamburgerMenu
 } from "../../redux/hamburger-menu/hamburger-menu.actions";
 
+// Data
+import hamburgerLinks from "../../data/hamburger.data";
+
 class HamburgerLinks extends Component {
   render() {
     const {
@@ -60,94 +63,21 @@ class HamburgerLinks extends Component {
             <div className="Hamburger-bar" style={bar_3} />
           </div>
           <div className="Hamburger-menu" style={menuStyles}>
-            <div>
-              <Link
-                to="/"
-                onClick={() => {
-                  hideHamburgerMenu();
-                  toggleBackground();
-                }}
-              >
-                HOME
-              </Link>
-            </div>
-            <div>
-              <Link
-                to="/partners/"
-                onClick={() => {
-                  hideHamburgerMenu();
-                  toggleBackground();
-                }}
-              >
-                PARTNERS
-              </Link>
-            </div>
-            <div>
-              <Link
-                to="/about-us/"
-                onClick={() => {
-                  hideHamburgerMenu();
-                  toggleBackground();
-                }}
-              >
-                WHO WE ARE
-              </Link>
-            </div>
-            <div>
-              <Link
-                to="/roadmap/"
-                onClick={() => {
-                  hideHamburgerMenu();
-                  toggleBackground();
-                }}
-              >
-                ROADMAP
-              </Link>
-            </div>
-            <div>
-              <Link
-                to="/our-solution/"
-                onClick={() => {
-                  hideHamburgerMenu();
-                  toggleBackground();
-                }}
-              >
-                OUR SOLUTION
-              </Link>
-            </div>
-            <div>
-              <Link
-                to="/ressources/"
-                onClick={() => {
-                  hideHamburgerMenu();
-                  toggleBackground();
-                }}
-              >
-                RESSOURCES
-              </Link>
-            </div>
-            <div>
-              <Link
-                to="/blog/"
-                onClick={() => {
-                  hideHamburgerMenu();
-                  toggleBackground();
-                }}
-              >
-                BLOG
-              </Link>
-            </div>
-            <div>
-              <Link
-                to="/get-in-touch/"
-                onClick={() => {
-                  hideHamburgerMenu();
-                  toggleBackground();
-                }}
-              >
-                GET IN TOUCH
-              </Link>
-            </div>
+            {hamburgerLinks.map(link => {
+              return (
+                <div key={link.id}>
+                  <Link
+                    to={link.link}
+                    onClick={() => {
+                      hideHamburgerMenu();
+                      toggleBackground();
+                    }}
+                  >
+                    {link.title}
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
