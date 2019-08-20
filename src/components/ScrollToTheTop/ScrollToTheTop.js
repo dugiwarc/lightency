@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import scrollElement from "scroll-to-element";
+
+// Graphics
+import arrow from "../../graphics/arrow.png";
 
 // Styles
 import "./ScrollToTheTop.scss";
@@ -7,20 +11,19 @@ import "./ScrollToTheTop.scss";
 class ScrollToTheTop extends Component {
   render() {
     const { solutionSectionIsVisible } = this.props;
-    const mainStyles = {
-      display: solutionSectionIsVisible && "block",
-      height: solutionSectionIsVisible && "50px",
-      width: solutionSectionIsVisible && "50px"
+
+    const imgStyles = {
+      transform: solutionSectionIsVisible && "translateY(0px) rotate(180deg)"
     };
     return (
       <div
-        style={mainStyles}
         className="ScrollToTheTop"
         onClick={() => {
-          window.scrollTo(0, 0);
-          console.log("STTT");
+          scrollElement(".App");
         }}
-      />
+      >
+        <img src={arrow} alt="arrow" style={imgStyles} />
+      </div>
     );
   }
 }

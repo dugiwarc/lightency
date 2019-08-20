@@ -15,7 +15,7 @@ import articles from "./data/articles.data";
 import ArticlePage from "./pages/Article/ArticlePage";
 import Footer from "./components/Footer/Footer";
 import BackgroundFiller from "./components/BackgroundFiller/BackgroundFiller";
-// import ScrollToTheTop from "./components/ScrollToTheTop/ScrollToTheTop";
+import ScrollToTheTop from "./components/ScrollToTheTop/ScrollToTheTop";
 
 function AppRouter() {
   return (
@@ -23,7 +23,7 @@ function AppRouter() {
       <div className="App">
         <BackgroundFiller />
         <Nav />
-        {/* <ScrollToTheTop /> */}
+        <ScrollToTheTop />
         <Route path="/" exact component={Homepage} />
         <Route path="/our-solution/" component={OurSolution} />
         <Route path="/ressources/" component={Ressources} />
