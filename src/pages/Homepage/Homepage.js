@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+// import scrollToElement from "scroll-to-element";
 
 // Components
 import HomeWelcome from "../../components/HomeWelcome/HomeWelcome";
@@ -23,8 +24,7 @@ import {
 } from "../../redux/scroll/scroll.actions";
 
 class Homepage extends React.Component {
-  componentDidMount() {
-    window.scrollTo(0, 0);
+  handleScroll = () => {
     const {
       updateYPosition,
       makeSSVisible,
@@ -34,16 +34,17 @@ class Homepage extends React.Component {
       whatWeDoSectionIsVisible,
       africanMarketIsVisible
     } = this.props;
-
-    window.addEventListener("scroll", () => {
-      updateYPosition(window.scrollY);
-      !solutionSectionIsVisible && window.scrollY > 50 && makeSSVisible();
-      !whatWeDoSectionIsVisible && window.scrollY > 750 && makeWWDVisible();
-      !africanMarketIsVisible && window.scrollY > 2400 && makeAMVisible();
-    });
+    updateYPosition(window.scrollY);
+    !solutionSectionIsVisible && window.scrollY > 50 && makeSSVisible();
+    !whatWeDoSectionIsVisible && window.scrollY > 750 && makeWWDVisible();
+    !africanMarketIsVisible && window.scrollY > 2200 && makeAMVisible();
+  };
+  componentDidMount() {
+    window.scrollTo(0, 0);
+    window.addEventListener("scroll", this.handleScroll);
   }
   componentWillUnmount() {
-    window.removeEventListener("scroll", () => console.log("event removed"));
+    window.removeEventListener("scroll", this.handleScroll);
   }
   render() {
     return (

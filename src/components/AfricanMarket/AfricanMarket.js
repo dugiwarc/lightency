@@ -10,7 +10,7 @@ import "./AfricanMarket.scss";
 export default class AfricanMarket extends React.Component {
   render() {
     return (
-      <section className="AfricanMarket">
+      <section className="AfricanMarket" id="AM">
         <div className="AMTitle">Why the african market</div>
         <div className="AMImgAndSolutions">
           <AMContinent />

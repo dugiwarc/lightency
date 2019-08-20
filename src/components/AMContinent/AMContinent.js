@@ -14,10 +14,20 @@ import Location from "../Location/Location";
 import "./AMContinent.scss";
 
 class AMContinent extends Component {
+  state = { isVisible: false };
+  componentDidUpdate() {
+    this.props.africanMarketIsVisible &&
+      setTimeout(() => {
+        this.setState({ isVisible: true });
+      }, 1000);
+  }
   render() {
-    const { africanMarketIsVisible } = this.props;
     const locationStyle = {
-      opacity: africanMarketIsVisible && "1"
+      opacity: this.state.isVisible && "1"
+    };
+    const continentStyle = {
+      display: this.state.isVisible && "block",
+      opacity: this.state.isVisible && "1"
     };
 
     return (
@@ -27,7 +37,7 @@ class AMContinent extends Component {
           aria-required="true"
           type="image/svg+xml"
           data={continent}
-          style={locationStyle}
+          style={continentStyle}
         />
         <div className="AMTContinent-locations" style={locationStyle}>
           {mapinfo.map((item, i) => {

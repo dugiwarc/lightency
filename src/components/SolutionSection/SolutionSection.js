@@ -15,7 +15,7 @@ class SolutionSection extends React.Component {
       opacity: solutionSectionIsVisible ? "1" : "0",
       transition: "all 0.5s ease-in",
       transform: solutionSectionIsVisible
-        ? "translateY(0px)"
+        ? `translateY(0px)`
         : "translateY(100px)"
     };
     return (

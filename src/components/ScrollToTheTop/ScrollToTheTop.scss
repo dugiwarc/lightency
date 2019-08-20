@@ -1,0 +1,9 @@
+.ScrollToTheTop {
+  display: none;
+  background: #000000;
+  position: sticky;
+  z-index: 999;
+  top: 50%;
+  right: 5%;
+  transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+}

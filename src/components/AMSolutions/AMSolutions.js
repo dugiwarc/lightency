@@ -16,9 +16,9 @@ class AMSolutions extends React.Component {
     };
     return (
       <div className="AMSolutions">
-        {data.map(item => {
+        {data.map((item, i) => {
           return (
-            <div className="AMSolutions-item" style={solutionsStyle}>
+            <div className="AMSolutions-item" style={solutionsStyle} key={i}>
               <div className="AMSolutions-item-title">{item.title}</div>
               <div className="AMSolutions-item-desc">{item.desc}</div>
             </div>
