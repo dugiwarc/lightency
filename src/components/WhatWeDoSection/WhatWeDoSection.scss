@@ -22,13 +22,6 @@
 
   .WWD-filter {
     position: absolute;
-    background: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(rgba(30, 87, 153, 0)),
-      color-stop(60%, rgba(black, 1))
-    );
     background: linear-gradient(
       to right,
       rgba(30, 87, 153, 0) 0%,
@@ -41,6 +34,7 @@
   }
   .WWD-text {
     z-index: 6;
+    overflow: hidden;
     grid-area: 2/14/10/20;
     height: 100%;
     width: 100%;
