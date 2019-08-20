@@ -14,21 +14,12 @@ import Location from "../Location/Location";
 import "./AMContinent.scss";
 
 class AMContinent extends Component {
-  state = { tickets: 1 };
-  componentDidUpdate() {
-    this.state.tickets !== 0 &&
-      this.props.yPosition > 2300 &&
-      this.setState({ tickets: 0 });
-  }
   render() {
-    const { yPosition } = this.props;
+    const { africanMarketIsVisible } = this.props;
     const locationStyle = {
-      opacity: yPosition > 2300 ? "1" : this.state.tickets === 0 ? "1" : "0"
+      opacity: africanMarketIsVisible && "1"
     };
-    const continentStyle = {
-      display:
-        yPosition > 2300 ? "block" : this.state.tickets === 0 ? "block" : "none"
-    };
+
     return (
       <div className="AMTContinent">
         <object
@@ -36,7 +27,7 @@ class AMContinent extends Component {
           aria-required="true"
           type="image/svg+xml"
           data={continent}
-          style={continentStyle}
+          style={locationStyle}
         />
         <div className="AMTContinent-locations" style={locationStyle}>
           {mapinfo.map((item, i) => {
@@ -54,8 +45,8 @@ class AMContinent extends Component {
   }
 }
 
-const mapStateToProps = ({ scrollState: { yPosition } }) => ({
-  yPosition
+const mapStateToProps = ({ scrollState: { africanMarketIsVisible } }) => ({
+  africanMarketIsVisible
 });
 
 export default connect(

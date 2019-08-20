@@ -18,7 +18,8 @@ import "./Homepage.scss";
 import {
   updateYPosition,
   makeSSVisible,
-  makeWWDVisible
+  makeWWDVisible,
+  makeAMVisible
 } from "../../redux/scroll/scroll.actions";
 
 class Homepage extends React.Component {
@@ -27,15 +28,18 @@ class Homepage extends React.Component {
     const {
       updateYPosition,
       makeSSVisible,
+      makeAMVisible,
       makeWWDVisible,
       solutionSectionIsVisible,
-      whatWeDoSectionIsVisible
+      whatWeDoSectionIsVisible,
+      africanMarketIsVisible
     } = this.props;
 
     window.addEventListener("scroll", () => {
       updateYPosition(window.scrollY);
       !solutionSectionIsVisible && window.scrollY > 50 && makeSSVisible();
       !whatWeDoSectionIsVisible && window.scrollY > 750 && makeWWDVisible();
+      !africanMarketIsVisible && window.scrollY > 2400 && makeAMVisible();
     });
   }
   componentWillUnmount() {
@@ -58,13 +62,18 @@ class Homepage extends React.Component {
 }
 
 const mapStateToProps = ({
-  scrollState: { solutionSectionIsVisible, WhatWeDoSectionIsVisible }
+  scrollState: {
+    solutionSectionIsVisible,
+    WhatWeDoSectionIsVisible,
+    africanMarketIsVisible
+  }
 }) => ({
   solutionSectionIsVisible,
-  WhatWeDoSectionIsVisible
+  WhatWeDoSectionIsVisible,
+  africanMarketIsVisible
 });
 
 export default connect(
   mapStateToProps,
-  { updateYPosition, makeSSVisible, makeWWDVisible }
+  { updateYPosition, makeSSVisible, makeWWDVisible, makeAMVisible }
 )(Homepage);

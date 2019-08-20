@@ -3,8 +3,6 @@ import React from "react";
 // Components
 import "./SSGroup.scss";
 
-// Graphics
-
 const SSGroup = ({ concernTitle, concernSTitle, solutionSTitle, image }) => {
   return (
     <div className="SS-group">

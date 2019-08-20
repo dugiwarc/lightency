@@ -3,14 +3,14 @@
   position: relative;
   min-width: 400px;
   min-height: 400px;
+  object,
+  .AMTContinent-locations {
+    opacity: 0;
+    position: absolute;
+    transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+  }
   object {
     transform: scale(1.2);
-    position: absolute;
-    transition: all 0.3s ease-in;
-  }
-  .AMTContinent-locations {
-    position: absolute;
-    transition: all 1s ease-in;
   }
   img {
     width: 400px;

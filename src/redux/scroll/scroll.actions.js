@@ -18,3 +18,9 @@ export const makeSSVisible = () => dispatch => {
     type: scrollTypes.MAKE_SS_VISIBLE
   });
 };
+
+export const makeAMVisible = () => dispatch => {
+  dispatch({
+    type: scrollTypes.MAKE_AM_VISIBLE
+  });
+};
