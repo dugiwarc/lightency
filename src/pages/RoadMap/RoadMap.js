@@ -8,7 +8,7 @@ class RoadMap extends React.Component {
     window.scrollTo(0, 0);
     setTimeout(() => {
       this.setState({ ready: true });
-    }, 1000);
+    }, 300);
   }
   render() {
     const mainStyles = {
