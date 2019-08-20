@@ -15,6 +15,11 @@
     grid-template-rows: repeat(20, 1fr);
     width: 1200px;
     height: 125px;
+    .RM-title,
+    .RM-text {
+      transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+      opacity: 0;
+    }
     .RM-title {
       font-size: 1.5rem;
       font-weight: bold;
@@ -25,16 +30,20 @@
     .text-left {
       grid-area: 1/4/23/18;
       text-align: right;
+      transform: translateX(-50px);
     }
     .text-right {
       grid-area: 1/24/21/41;
+      transform: translateX(50px);
     }
     .title-left {
       grid-area: 1/4/10/18;
       text-align: right;
+      transform: translateX(-150px);
     }
     .title-right {
       grid-area: 1/24/9/41;
+      transform: translateX(150px);
     }
   }
   .RM-checkpoint {
@@ -44,6 +53,8 @@
     width: 20px;
     border-radius: 10px;
     background: #ffde00;
+    opacity: 0;
+    transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
   }
   .one {
     transform: translateY(-240px);
@@ -60,8 +71,9 @@
   .RM-timeline {
     width: 5px;
     background: black;
-    height: 85%;
+    height: 0%;
     position: absolute;
+    transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
   }
   @media only screen and(max-width: 1300px) {
     .RM-item {
