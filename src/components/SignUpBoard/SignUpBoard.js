@@ -1,11 +1,18 @@
 import React from "react";
 import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
 // Styles
 import "./SignUpBoard.scss";
 
 // Actions
 import { signUp } from "../../redux/signupboard/signup.actions";
+
+// Selectors
+import {
+  selectSignUpShow,
+  selectSignUpIsHidden
+} from "../../redux/signupboard/signup.selectors";
 
 class SignUpBoard extends React.Component {
   state = { isLoading: false };
@@ -42,6 +49,7 @@ class SignUpBoard extends React.Component {
         <button
           className="board-subscribe"
           onClick={() => {
+            console.log("Clicked");
             signUp();
             this.setState({ isLoading: true });
             setTimeout(() => {
@@ -74,6 +82,11 @@ const mapStateToProps = ({ signUpState: { signUpIsHidden, hasSignedUp } }) => ({
   signUpIsHidden,
   hasSignedUp
 });
+
+// const mapStateToProps = createStructuredSelector({
+//   hasSignedUp: selectSignUpShow,
+//   signUpIsHidden: selectSignUpIsHidden
+// });
 
 export default connect(
   mapStateToProps,

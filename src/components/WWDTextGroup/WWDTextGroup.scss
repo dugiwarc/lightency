@@ -1,6 +1,7 @@
 .WWD-text-group {
   font-size: 100%;
   font-weight: 200;
+  transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
   @media only screen and (max-width: 1600px) {
     margin-bottom: 20px;
   }
@@ -14,4 +15,14 @@
   @media only screen and (max-width: 450px) {
     font-size: 110%;
   }
+}
+.WWD-text-group:nth-child(2) {
+  transform: translateX(50px);
+}
+
+.WWD-text-group:nth-child(3) {
+  transform: translateX(100px);
+}
+.WWD-text-group:nth-child(4) {
+  transform: translateX(150px);
 }
