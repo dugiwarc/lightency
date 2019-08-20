@@ -71,7 +71,6 @@ export default class Location extends React.Component {
         <div
           className={`location location-${location}`}
           onMouseEnter={() => {
-            console.log("mouseenter");
             this.setState({
               [`isHovered${location.charAt(0).toUpperCase() +
                 location.slice(1)}`]: true
