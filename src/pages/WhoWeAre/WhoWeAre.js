@@ -1,17 +1,38 @@
 import React from "react";
+import { connect } from "react-redux";
 
+// Components
 import WWAItem from "../../components/WWAItem/WWAItem";
 import Contact from "../../components/Contact/Contact";
 
+// Data
 import { users } from "../../data/users.data";
 
+// Styles
 import "./WhoWeAre.scss";
 
 class WhoWeAre extends React.Component {
+  state = { isVisible: false };
+
+  handleScroll = () => {
+    const { yPosition } = this.props;
+    yPosition > 50 && this.setState({ isVisible: true });
+  };
+
   componentDidMount() {
     window.scrollTo(0, 0);
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
   }
   render() {
+    const { isVisible } = this.state;
+    const mainStyles = {
+      transform: isVisible && "translateY(0px)",
+      opacity: isVisible && "1"
+    };
     return (
       <div className="WhoWeAre">
         <div className="WWA-header">Who we are</div>
@@ -28,7 +49,7 @@ class WhoWeAre extends React.Component {
             transition coupled with a strong economic and social impact.
           </p>
         </section>
-        <div className="WWA-WE">
+        <div className="WWA-WE" style={mainStyles}>
           <div className="WWA-team group">
             <div className="WWA-title">TEAM</div>
             <div className="WWA-team-founders">
@@ -106,4 +127,11 @@ class WhoWeAre extends React.Component {
   }
 }
 
-export default WhoWeAre;
+const mapStateToProps = ({ scrollState: { yPosition } }) => ({
+  yPosition
+});
+
+export default connect(
+  mapStateToProps,
+  null
+)(WhoWeAre);
