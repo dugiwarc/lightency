@@ -83,16 +83,20 @@ $base-yellow: #ffde00;
       transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
       transform: translateY(100px);
     }
-
-    @media only screen and (max-width: 1200px) {
-      grid-area: 9/5/17/20;
-    }
-    @media only screen and (max-width: 600px) {
+  }
+  @media only screen and (max-width: 1200px) {
+    grid-area: 9/5/17/20;
+  }
+  @media only screen and (max-width: 600px) {
+    grid-area: 6/3/17/20;
+    .Home-text {
       transform: scale(0.9);
       animation: none;
-      grid-area: 6/3/17/20;
     }
-    @media only screen and (max-width: 450px) {
+  }
+  @media only screen and (max-width: 450px) {
+    grid-area: 5/2/17/20;
+    .Home-text {
       transform: scale(0.7) translate(-80px, -30px);
       animation: none;
       .Home-text-subtitle {
