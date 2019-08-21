@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux";
 
 // Components
 import WWAItem from "../../components/WWAItem/WWAItem";
@@ -15,8 +14,7 @@ class WhoWeAre extends React.Component {
   state = { isVisible: false };
 
   handleScroll = () => {
-    const { yPosition } = this.props;
-    yPosition > 50 && this.setState({ isVisible: true });
+    window.scrollY > 50 && this.setState({ isVisible: true });
   };
 
   componentDidMount() {
@@ -127,11 +125,4 @@ class WhoWeAre extends React.Component {
   }
 }
 
-const mapStateToProps = ({ scrollState: { yPosition } }) => ({
-  yPosition
-});
-
-export default connect(
-  mapStateToProps,
-  null
-)(WhoWeAre);
+export default WhoWeAre;
