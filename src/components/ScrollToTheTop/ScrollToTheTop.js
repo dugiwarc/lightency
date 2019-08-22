@@ -10,9 +10,10 @@ import "./ScrollToTheTop.scss";
 
 class ScrollToTheTop extends Component {
   render() {
-    const { solutionSectionIsVisible } = this.props;
-
+    const { solutionSectionIsVisible, yPosition} = this.props;
+    console.log(yPosition)
     const imgStyles = {
+      opacity: yPosition === 0 ? "0" : 1,
       transform: solutionSectionIsVisible && "translateY(0px) rotate(180deg)"
     };
     return (
@@ -28,8 +29,8 @@ class ScrollToTheTop extends Component {
   }
 }
 
-const mapStateToProps = ({ scrollState: { solutionSectionIsVisible } }) => ({
-  solutionSectionIsVisible
+const mapStateToProps = ({ scrollState: { solutionSectionIsVisible, yPosition } }) => ({
+  solutionSectionIsVisible, yPosition
 });
 
 export default connect(
