@@ -9,31 +9,35 @@ import arrow from "../../graphics/arrow.png";
 import "./ScrollToTheTop.scss";
 
 class ScrollToTheTop extends Component {
-  render() {
-    const { solutionSectionIsVisible, yPosition} = this.props;
-    console.log(yPosition)
-    const imgStyles = {
-      opacity: yPosition === 0 ? "0" : 1,
-      transform: solutionSectionIsVisible && "translateY(0px) rotate(180deg)"
-    };
-    return (
-      <div
-        className="ScrollToTheTop"
-        onClick={() => {
-          scrollElement(".App");
-        }}
-      >
-        <img src={arrow} alt="arrow" style={imgStyles} />
-      </div>
-    );
-  }
+	render() {
+		const { solutionSectionIsVisible, yPosition } = this.props;
+		console.log(yPosition);
+		const imgStyles = {
+			opacity: yPosition === 0 ? "0" : 1,
+			transform: solutionSectionIsVisible && "translateY(0px) rotate(180deg)"
+		};
+		return (
+			<div
+				className='ScrollToTheTop'
+				onClick={() => {
+					scrollElement(".App");
+				}}
+			>
+				<div className='hello' />
+				<img src={arrow} alt='arrow' style={imgStyles} />
+			</div>
+		);
+	}
 }
 
-const mapStateToProps = ({ scrollState: { solutionSectionIsVisible, yPosition } }) => ({
-  solutionSectionIsVisible, yPosition
+const mapStateToProps = ({
+	scrollState: { solutionSectionIsVisible, yPosition }
+}) => ({
+	solutionSectionIsVisible,
+	yPosition
 });
 
 export default connect(
-  mapStateToProps,
-  null
+	mapStateToProps,
+	null
 )(ScrollToTheTop);
