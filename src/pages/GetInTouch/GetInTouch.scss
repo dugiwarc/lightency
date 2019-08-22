@@ -119,8 +119,11 @@ $base-gold: #ffde00;
 		box-sizing: border-box;
 		padding: 10px;
 		outline: none;
+		z-index: 2;
 	}
 	button {
+		z-index: 1;
+		transform: translateY(-80px);
 		border: 0;
 		background: #202a43;
 		color: white;
@@ -130,6 +133,7 @@ $base-gold: #ffde00;
 		margin-top: 10px;
 		text-transform: uppercase;
 		padding: 10px 50px;
+		transition: all 1s cubic-bezier(0.5, -0.75, 0.7, 2);
 	}
 	button:hover {
 		background: black;

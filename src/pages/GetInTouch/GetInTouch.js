@@ -47,7 +47,9 @@ class GetInTouch extends React.Component {
 						</label>
 						<textarea id='message' name='message' />
 					</div>
-					<button type='submit'>Send</button>
+					<button type='submit' style={letterStyles}>
+						Send
+					</button>
 				</form>
 			</div>
 		);
