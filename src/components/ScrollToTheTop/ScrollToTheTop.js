@@ -11,9 +11,8 @@ import "./ScrollToTheTop.scss";
 class ScrollToTheTop extends Component {
 	render() {
 		const { solutionSectionIsVisible, yPosition } = this.props;
-		console.log(yPosition);
 		const imgStyles = {
-			opacity: yPosition === 0 ? "0" : 1,
+			display: yPosition === 0 ? "none" : "block",
 			transform: solutionSectionIsVisible && "translateY(0px) rotate(180deg)"
 		};
 		return (

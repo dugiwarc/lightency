@@ -12,7 +12,6 @@ class HamburgerIcon extends React.Component {
 			toggleBackground,
 			toggleHamburgerMenu,
 			hamburgerMenuIsHidden,
-			backgroundFillerIsHidden,
 			signUpIsHidden,
 			hideSignUp
 		} = this.props;

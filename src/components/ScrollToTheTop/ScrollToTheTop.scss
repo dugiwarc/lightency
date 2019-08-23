@@ -1,21 +1,21 @@
 .ScrollToTheTop {
-  position: sticky;
-  z-index: 999;
-  height: 0px;
-  width: 0px;
-  top: 50%;
-  img {
-    height: 50px;
-    width: 50px;
-    background: gold;
-    padding: 10px;
-    transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
-    transform: translateX(-150px);
-  }
-  @media only screen and (max-width: 450px) {
-    img {
-      height: 15px;
-      width: 15px;
-    }
-  }
+	position: sticky;
+	z-index: 999;
+	height: 0px;
+	width: 0px;
+	top: 50%;
+	img {
+		height: 30px;
+		width: 30px;
+		background: gold;
+		padding: 10px;
+		transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+		transform: translateX(-150px);
+	}
+	@media only screen and (max-width: 450px) {
+		img {
+			height: 15px;
+			width: 15px;
+		}
+	}
 }
