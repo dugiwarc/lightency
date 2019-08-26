@@ -19,7 +19,7 @@ class AMContinent extends Component {
 		this.setState({
 			offsetTop:
 				document.querySelector("#AM").offsetTop -
-				document.querySelector(".AMTContinent").offsetTop
+				document.querySelector(".AMTContinent").offsetHeight
 		});
 	};
 	shouldComponentUpdate(nextProps, nextState) {
@@ -30,7 +30,7 @@ class AMContinent extends Component {
 			{
 				offsetTop:
 					document.querySelector("#AM").offsetTop -
-					document.querySelector(".AMTContinent").offsetHeight
+					document.querySelector(".AMTContinent").offsetHeight * 1.2
 			},
 			() => console.log("this.state.offsetTop", this.state.offsetTop)
 		);

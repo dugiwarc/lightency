@@ -1,11 +1,8 @@
 .WWD-text-group {
-	font-size: 100%;
 	font-weight: 100;
 	transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
 	margin-bottom: 20px;
-	@media (min-width: 30rem) {
-		font-size: calc(1rem + ((1vw - 0.3rem) * 0.5556));
-	}
+	font-size: 1rem;
 	@media only screen and (max-width: 450px) {
 		text-align: center;
 	}
