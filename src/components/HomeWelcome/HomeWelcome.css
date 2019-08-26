@@ -1,0 +1,81 @@
+.Home-welcome {
+  height: 75vh;
+  min-height: 700px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[40];
+      grid-template-columns: repeat(40, 1fr);
+  -ms-grid-rows: (1fr)[20];
+      grid-template-rows: repeat(20, 1fr);
+  position: relative;
+  max-height: 75vh;
+}
+
+.Home-welcome .Home-img {
+  overflow: hidden;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 20;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 40;
+  grid-area: 1/1/21/41;
+  max-height: 100%;
+  z-index: -1;
+  position: fixed;
+}
+
+.Home-welcome .Home-img::before {
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
+  background-image: url("../../graphics/planet.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  will-change: transform;
+}
+
+@media only screen and (max-width: 1400px) {
+  .Home-welcome {
+    min-height: 500px;
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .Home-welcome {
+    min-height: 625px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .Home-welcome {
+    min-height: 600px;
+    height: 67vh;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .Home-welcome {
+    height: 65vh;
+    min-height: 400px;
+  }
+  .Home-welcome .Home-img {
+    overflow: hidden;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 20;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 40;
+    grid-area: 1/1/21/41;
+    max-height: 100%;
+    z-index: -1;
+    position: relative;
+  }
+  .Home-welcome .Home-img::before {
+    background-image: url("../../graphics/planet_400.jpg");
+  }
+}
+/*# sourceMappingURL=HomeWelcome.css.map */

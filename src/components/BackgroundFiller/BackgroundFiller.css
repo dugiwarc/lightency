@@ -1,0 +1,9 @@
+.BackgroundFiller {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: black;
+  -webkit-filter: opacity(0.6);
+          filter: opacity(0.6);
+}
+/*# sourceMappingURL=BackgroundFiller.css.map */

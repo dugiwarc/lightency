@@ -1,0 +1,122 @@
+.location {
+  background-color: #ffde00;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 8px #ffde00, inset 0 0 8px #ffde00;
+          box-shadow: 0 0 8px #ffde00, inset 0 0 8px #ffde00;
+  -webkit-animation: pulse 2s linear 1s infinite;
+          animation: pulse 2s linear 1s infinite;
+}
+
+.location-tunisia {
+  -webkit-transform: translate(105px, -30px);
+          transform: translate(105px, -30px);
+}
+
+.location-mali {
+  -webkit-transform: translate(48px, 48px);
+          transform: translate(48px, 48px);
+}
+
+.location-senegal {
+  -webkit-transform: translate(-30px, 56px);
+          transform: translate(-30px, 56px);
+}
+
+.location-tanzania {
+  -webkit-transform: translate(232px, 125px);
+          transform: translate(232px, 125px);
+}
+
+.location-uganda {
+  -webkit-transform: translate(223px, 107px);
+          transform: translate(223px, 107px);
+}
+
+.location-kenya {
+  -webkit-transform: translate(249px, 102px);
+          transform: translate(249px, 102px);
+}
+
+.location-burkinaFaso {
+  -webkit-transform: translate(36px, 59px);
+          transform: translate(36px, 59px);
+}
+
+.info {
+  width: 450px;
+  padding: 15px;
+  font-weight: 100;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: black;
+  color: white;
+  position: absolute;
+}
+
+.info-burkinaFaso {
+  -webkit-transform: translate(-108px, 68px);
+          transform: translate(-108px, 68px);
+}
+
+.info-kenya {
+  -webkit-transform: translate(-150px, -54px);
+          transform: translate(-150px, -54px);
+}
+
+.info-tunisia {
+  -webkit-transform: translate(-117px, -20px);
+          transform: translate(-117px, -20px);
+}
+
+.info-tanzania {
+  -webkit-transform: translate(-146px, 130px);
+          transform: translate(-146px, 130px);
+}
+
+.info-uganda {
+  -webkit-transform: translate(-135px, -44px);
+          transform: translate(-135px, -44px);
+}
+
+.info-senegal {
+  -webkit-transform: translate(-106px, 65px);
+          transform: translate(-106px, 65px);
+}
+
+.info-mali {
+  -webkit-transform: translate(-92px, 54px);
+          transform: translate(-92px, 54px);
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 8px #ffde00, inset 0 0 8px #ffde00;
+            box-shadow: 0 0 8px #ffde00, inset 0 0 8px #ffde00;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 16px #ffde00, inset 0 0 14px #ffde00;
+            box-shadow: 0 0 16px #ffde00, inset 0 0 14px #ffde00;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 8px #ffde00, inset 0 0 8px #ffde00;
+            box-shadow: 0 0 8px #ffde00, inset 0 0 8px #ffde00;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 8px #ffde00, inset 0 0 8px #ffde00;
+            box-shadow: 0 0 8px #ffde00, inset 0 0 8px #ffde00;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 16px #ffde00, inset 0 0 14px #ffde00;
+            box-shadow: 0 0 16px #ffde00, inset 0 0 14px #ffde00;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 8px #ffde00, inset 0 0 8px #ffde00;
+            box-shadow: 0 0 8px #ffde00, inset 0 0 8px #ffde00;
+  }
+}
+/*# sourceMappingURL=Location.css.map */

@@ -1,0 +1,313 @@
+.WhoWeAre {
+  font-family: "Lato", sans-serif;
+}
+
+.WhoWeAre .WWA-WE {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.WhoWeAre .WWA-WE .WWA-item-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+}
+
+.WhoWeAre .WWA-WE .WWA-vps,
+.WhoWeAre .WWA-WE .WWA-tech,
+.WhoWeAre .WWA-WE .WWA-advisors,
+.WhoWeAre .WWA-WE .WWA-ambassadors,
+.WhoWeAre .WWA-WE .WWA-team-founders {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.WhoWeAre .WWA-WE .WWA-ambassadors {
+  margin: 100px 0 250px 0;
+}
+
+.WhoWeAre .WWA-WE .WWA-tech {
+  margin-top: 200px;
+  margin-bottom: 150px;
+}
+
+.WhoWeAre .WWA-WE .WWA-advisors {
+  margin: 100px 0 150px 0;
+}
+
+.WhoWeAre .WWA-WE .WWA-team-founders {
+  margin: 100px 0 200px 0;
+}
+
+.WhoWeAre .WWA-WE .WWA-title {
+  margin-bottom: 100px;
+}
+
+.WhoWeAre .WWA-WE img {
+  width: 200px;
+  height: 200px;
+}
+
+.WhoWeAre .WWA-WE .WWA-title {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.WhoWeAre .WWA-team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.WhoWeAre .WWA-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-align: center;
+  height: 200px;
+  background: #202a43;
+  color: white;
+  font-weight: bold;
+}
+
+.WhoWeAre .WWA-intro {
+  height: 300px;
+  font-size: 2rem;
+  font-weight: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 50px 100px;
+}
+
+.WhoWeAre .WWA-intro p {
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 1600px) {
+  .WhoWeAre .WWA-WE .WWA-team-founders,
+  .WhoWeAre .WWA-WE .WWA-vps,
+  .WhoWeAre .WWA-WE .WWA-tech,
+  .WhoWeAre .WWA-WE .WWA-advisors,
+  .WhoWeAre .WWA-WE .WWA-ambassadors {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  .WhoWeAre .WWA-WE .WWA-item {
+    margin: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .WhoWeAre .WWA-intro {
+    font-weight: 100;
+    text-align: center;
+  }
+  .WhoWeAre .WWA-title {
+    margin-top: 50px;
+  }
+  .WhoWeAre .WWA-WE .WWA-team-founders {
+    margin: 80px 0 80px 0;
+  }
+  .WhoWeAre .WWA-WE .WWA-tech {
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
+  .WhoWeAre .WWA-WE .WWA-advisors {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .WhoWeAre .WWA-WE .WWA-ambassadors {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .WhoWeAre .WWA-WE .WWA-title {
+    margin-bottom: 0px;
+  }
+  .WhoWeAre .WWA-WE .WWA-team-founders,
+  .WhoWeAre .WWA-WE .WWA-vps,
+  .WhoWeAre .WWA-WE .WWA-tech,
+  .WhoWeAre .WWA-WE .WWA-advisors,
+  .WhoWeAre .WWA-WE .WWA-ambassadors {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .WhoWeAre .WWA-WE .WWA-team-founders,
+  .WhoWeAre .WWA-WE .WWA-vps,
+  .WhoWeAre .WWA-WE .WWA-tech,
+  .WhoWeAre .WWA-WE .WWA-advisors,
+  .WhoWeAre .WWA-WE .WWA-ambassadors {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .WhoWeAre .WWA-intro {
+    font-size: 1.6rem;
+    padding: 0px 100px;
+  }
+  .WhoWeAre .WWA-WE .WWA-item {
+    margin: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .WhoWeAre .WWA-intro {
+    font-size: 1.4em;
+    padding: 0px 100px;
+  }
+  .WhoWeAre .WWA-WE .WWA-item {
+    margin: 0 10px;
+  }
+  .WhoWeAre .WWA-WE .WWA-team-founders,
+  .WhoWeAre .WWA-WE .WWA-vps,
+  .WhoWeAre .WWA-WE .WWA-tech,
+  .WhoWeAre .WWA-WE .WWA-advisors,
+  .WhoWeAre .WWA-WE .WWA-ambassadors {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  .WhoWeAre .WWA-WE .WWA-team {
+    width: 100%;
+  }
+  .WhoWeAre .WWA-WE .WWA-title {
+    font-size: 4rem;
+    margin: -10px 0;
+  }
+  .WhoWeAre .WWA-WE .WWA-vps {
+    margin: -70px 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (max-width: 950px) {
+  .WhoWeAre .WWA-intro {
+    padding: 0;
+    font-size: 1.4rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .WhoWeAre .WWA-WE .WWA-item {
+    margin: 30px 0px;
+  }
+  .WhoWeAre .WWA-WE .WWA-title {
+    font-size: 2rem;
+  }
+  .WhoWeAre .WWA-WE .WWA-team-founders {
+    margin-bottom: 0px;
+  }
+  .WhoWeAre .WWA-WE .WWA-vps {
+    margin-bottom: 10px;
+  }
+  .WhoWeAre .WWA-WE .WWA-advisors,
+  .WhoWeAre .WWA-WE .WWA-ambassadors,
+  .WhoWeAre .WWA-WE .WWA-team-founders,
+  .WhoWeAre .WWA-WE .WWA-vps,
+  .WhoWeAre .WWA-WE .WWA-tech {
+    margin-top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .WhoWeAre .WWA-intro {
+    padding: 0;
+    font-size: 1rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .WhoWeAre .WWA-WE .WWA-title {
+    font-size: 2rem;
+  }
+  .WhoWeAre .WWA-WE .WWA-team-founders {
+    margin-bottom: 0px;
+  }
+  .WhoWeAre .WWA-WE .WWA-vps {
+    margin-bottom: 10px;
+  }
+  .WhoWeAre .WWA-WE .WWA-advisors,
+  .WhoWeAre .WWA-WE .WWA-ambassadors,
+  .WhoWeAre .WWA-WE .WWA-team-founders,
+  .WhoWeAre .WWA-WE .WWA-vps,
+  .WhoWeAre .WWA-WE .WWA-tech {
+    margin-top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=WhoWeAre.css.map */

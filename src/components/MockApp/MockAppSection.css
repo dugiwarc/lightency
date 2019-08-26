@@ -1,0 +1,147 @@
+.MockApp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 900px;
+  background: #202a43;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.MockApp .MA-text {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px 0 100px 0;
+}
+
+.MockApp .MA-text .MA-item {
+  width: 25%;
+}
+
+.MockApp .MA-text .MA-title {
+  font-size: 3rem;
+  color: #ffde00;
+  font-weight: bold;
+  width: 50px;
+  text-transform: uppercase;
+}
+
+.MockApp .MA-text .MA-desc {
+  font-weight: 100;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.MockApp .MA-img {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 1400px) {
+  .MockApp .MA-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .MockApp {
+    min-height: 720px;
+  }
+  .MockApp img {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .MockApp .MA-text .MA-desc {
+    font-weight: 100;
+    font-size: 0.8rem;
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .MockApp .MA-img img {
+    width: 100%;
+  }
+  .MockApp .MA-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: center;
+  }
+  .MockApp .MA-text .MA-title {
+    font-size: 3rem;
+    width: 100%;
+  }
+  .MockApp .MA-text .MA-desc {
+    font-weight: 100;
+    font-size: 1.3rem;
+  }
+  .MockApp .MA-text .MA-item {
+    width: 63%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .MockApp {
+    min-height: 1300px;
+  }
+  .MockApp .MA-text .MA-item .MA-title {
+    text-align: start;
+  }
+  .MockApp .MA-text .MA-item .MA-desc {
+    width: 100%;
+    text-align: start;
+  }
+}
+/*# sourceMappingURL=MockAppSection.css.map */

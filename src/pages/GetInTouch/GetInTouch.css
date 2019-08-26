@@ -1,0 +1,276 @@
+.GetInTouch {
+  height: 80vh;
+  min-height: 800px;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.GetInTouch .GITTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100px;
+  overflow: hidden;
+}
+
+.GetInTouch .GITTitle .letter {
+  -webkit-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  font-size: 4rem;
+}
+
+.GetInTouch .GITTitle .letter:nth-child(1) {
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+}
+
+.GetInTouch .GITTitle .letter:nth-child(2) {
+  -webkit-transform: translateY(160px);
+          transform: translateY(160px);
+}
+
+.GetInTouch .GITTitle .letter:nth-child(3) {
+  -webkit-transform: translateY(240px);
+          transform: translateY(240px);
+}
+
+.GetInTouch .GITTitle .letter:nth-child(4) {
+  -webkit-transform: translateY(320px);
+          transform: translateY(320px);
+}
+
+.GetInTouch .GITTitle .letter:nth-child(5) {
+  -webkit-transform: translateY(380px);
+          transform: translateY(380px);
+}
+
+.GetInTouch .GITTitle .letter:nth-child(6) {
+  -webkit-transform: translateY(480px);
+          transform: translateY(480px);
+}
+
+.GetInTouch .GITTitle .letter:nth-child(7) {
+  -webkit-transform: translateY(580px);
+          transform: translateY(580px);
+}
+
+.GetInTouch .GITTitle .letter:nth-child(8) {
+  -webkit-transform: translateY(680px);
+          transform: translateY(680px);
+}
+
+.GetInTouch .GITTitle .letter:nth-child(9) {
+  -webkit-transform: translateY(780px);
+          transform: translateY(780px);
+}
+
+.GetInTouch .GITTitle .letter:nth-child(10) {
+  -webkit-transform: translateY(880px);
+          transform: translateY(880px);
+}
+
+.GetInTouch::after {
+  content: "";
+  position: absolute;
+  background-image: url("../../graphics/planet.jpg");
+  width: 100%;
+  height: 100%;
+  -webkit-animation: width-animation 1s cubic-bezier(0.25, 0.75, 0.5, 1.25) forwards;
+          animation: width-animation 1s cubic-bezier(0.25, 0.75, 0.5, 1.25) forwards;
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
+}
+
+@-webkit-keyframes width-animation {
+  0% {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 5% 100%, 5% 0, 95% 0, 95% 100%, 100% 100%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 5% 100%, 5% 0, 95% 0, 95% 100%, 100% 100%, 100% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 0, 75% 0, 75% 100%, 100% 100%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 0, 75% 0, 75% 100%, 100% 100%, 100% 0%);
+  }
+}
+
+@keyframes width-animation {
+  0% {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 5% 100%, 5% 0, 95% 0, 95% 100%, 100% 100%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 5% 100%, 5% 0, 95% 0, 95% 100%, 100% 100%, 100% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 0, 75% 0, 75% 100%, 100% 100%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 0, 75% 0, 75% 100%, 100% 100%, 100% 0%);
+  }
+}
+
+.GetInTouch form {
+  width: 400px;
+}
+
+.GetInTouch form div {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.GetInTouch label {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: all 1s cubic-bezier(0.5, -0.75, 0.7, 2);
+  transition: all 1s cubic-bezier(0.5, -0.75, 0.7, 2);
+}
+
+.GetInTouch textarea {
+  height: 200px;
+  border: none;
+  resize: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  outline: none;
+  z-index: 2;
+}
+
+.GetInTouch button {
+  z-index: 1;
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
+  border: 0;
+  background: #202a43;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  width: 100%;
+  margin-top: 10px;
+  text-transform: uppercase;
+  padding: 10px 50px;
+  -webkit-transition: all 1s cubic-bezier(0.5, -0.75, 0.7, 2);
+  transition: all 1s cubic-bezier(0.5, -0.75, 0.7, 2);
+}
+
+.GetInTouch button:hover {
+  background: black;
+  color: #ffde00;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.GetInTouch input,
+.GetInTouch textarea {
+  border: 0;
+}
+
+.GetInTouch input {
+  height: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 10px;
+  border-radius: 0px;
+}
+
+.GetInTouch input,
+.GetInTouch textarea {
+  outline: 0px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.GetInTouch input:before,
+.GetInTouch input:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  border-radius: 100px / 10px;
+}
+
+.GetInTouch input:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+          transform: skew(8deg) rotate(3deg);
+}
+
+.GetInTouch h1 {
+  font-size: 4.9rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1400px) {
+  .GetInTouch form {
+    width: 320px;
+  }
+  .GetInTouch h1 {
+    font-size: 3.9rem;
+  }
+  .GetInTouch label {
+    font-size: 1rem;
+  }
+  .GetInTouch textarea {
+    height: 120px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .GetInTouch::after {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 15% 100%, 15% 0, 85% 0, 85% 100%, 100% 100%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 15% 100%, 15% 0, 85% 0, 85% 100%, 100% 100%, 100% 0%);
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .GetInTouch::after {
+    content: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .GetInTouch {
+    min-height: 0px;
+    height: 70vh;
+    height: 85vh;
+  }
+  .GetInTouch form {
+    width: 80%;
+  }
+  .GetInTouch form h1 {
+    font-size: 3rem;
+  }
+  .GetInTouch form textarea {
+    height: 100px;
+  }
+  .GetInTouch form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+}
+/*# sourceMappingURL=GetInTouch.css.map */

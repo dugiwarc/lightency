@@ -1,0 +1,120 @@
+.WhatWeDo {
+  z-index: 1;
+  height: 500px;
+  min-height: 500px;
+  width: 100%;
+  background: url("../../graphics/test.jpg");
+  background-size: 1950px;
+  background-position-x: -400px;
+  background-attachment: fixed;
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-columns: (1fr)[20];
+      grid-template-columns: repeat(20, 1fr);
+  -ms-grid-rows: (1fr)[10];
+      grid-template-rows: repeat(10, 1fr);
+  color: white;
+}
+
+.WhatWeDo .hidden {
+  opacity: 0;
+}
+
+.WhatWeDo .console-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.WhatWeDo .WWD-filter {
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(30, 87, 153, 0)), color-stop(60%, black));
+  background: linear-gradient(to right, rgba(30, 87, 153, 0) 0%, black 60%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#000000',GradientType=1 );
+  /* IE6-9 */
+  width: 100%;
+  height: 500px;
+}
+
+.WhatWeDo .WWD-text {
+  z-index: 6;
+  overflow: hidden;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 8;
+  -ms-grid-column: 14;
+  -ms-grid-column-span: 6;
+  grid-area: 2/14/10/20;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.WhatWeDo .WWD-text-title {
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1600px) {
+  .WhatWeDo .WWD-text {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .WhatWeDo .WWD-text {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 10;
+    -ms-grid-column: 13;
+    -ms-grid-column-span: 7;
+    grid-area: 1/13/11/20;
+  }
+  .WhatWeDo .WWD-text-title {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .WhatWeDo .WWD-text {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 10;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 18;
+    grid-area: 1/2/11/20;
+  }
+  .WhatWeDo .WWD-text-title {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .WhatWeDo {
+    background: url("../../graphics/test_450.jpg");
+    background-size: cover;
+  }
+  .WhatWeDo .WWD-filter {
+    background: black;
+    -webkit-filter: opacity(0.8);
+            filter: opacity(0.8);
+  }
+}
+/*# sourceMappingURL=WhatWeDoSection.css.map */

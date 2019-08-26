@@ -1,0 +1,246 @@
+.SU-board {
+  position: absolute;
+  z-index: -100;
+  background-color: #202b43;
+  width: 350px;
+  height: 400px;
+  top: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: -400px;
+  -webkit-transition: left 0.3s ease-in;
+  transition: left 0.3s ease-in;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 25px 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.SU-board input {
+  border: none;
+  border-radius: 0;
+  min-height: 30px;
+  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.SU-board .board-title {
+  margin-bottom: 10px;
+  color: white;
+  background: gold;
+  font-weight: bold;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px;
+}
+
+.SU-board .board-subtitle {
+  width: 84%;
+  text-align: center;
+  color: white;
+  font-weight: 100;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.SU-board .board-subscribe {
+  background-color: #ffde00;
+  width: 150px;
+  border: 0;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+  padding: 10px 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.SU-board .board-subscribe {
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.SU-board .board-subscribe:before,
+.SU-board .board-subscribe:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  top: 50%;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  border-radius: 100px / 10px;
+}
+
+.SU-board .board-subscribe:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+          transform: skew(8deg) rotate(3deg);
+}
+
+.SU-board .board-subscribe:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: black;
+  color: #ffde00;
+}
+
+.SU-board .board-input-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.SU-board .board-input-item label {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.SU-board .lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 20px;
+}
+
+.SU-board .lds-ellipsis div {
+  position: absolute;
+  top: 35%;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #202b43;
+  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+          animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.SU-board .lds-ellipsis div:nth-child(1) {
+  left: 6px;
+  -webkit-animation: lds-ellipsis1 0.6s infinite;
+          animation: lds-ellipsis1 0.6s infinite;
+}
+
+.SU-board .lds-ellipsis div:nth-child(2) {
+  left: 6px;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
+}
+
+.SU-board .lds-ellipsis div:nth-child(3) {
+  left: 26px;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
+}
+
+.SU-board .lds-ellipsis div:nth-child(4) {
+  left: 45px;
+  -webkit-animation: lds-ellipsis3 0.6s infinite;
+          animation: lds-ellipsis3 0.6s infinite;
+}
+
+@-webkit-keyframes lds-ellipsis1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes lds-ellipsis3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(19px, 0);
+            transform: translate(19px, 0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(19px, 0);
+            transform: translate(19px, 0);
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .SU-board {
+    top: 17%;
+  }
+}
+/*# sourceMappingURL=SignUpBoard.css.map */

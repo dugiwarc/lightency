@@ -1,0 +1,27 @@
+.ScrollToTheTop {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 999;
+  height: 0px;
+  width: 0px;
+  top: 50%;
+}
+
+.ScrollToTheTop img {
+  height: 30px;
+  width: 30px;
+  background: gold;
+  padding: 10px;
+  -webkit-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transform: translateX(-150px);
+          transform: translateX(-150px);
+}
+
+@media only screen and (max-width: 450px) {
+  .ScrollToTheTop img {
+    height: 15px;
+    width: 15px;
+  }
+}
+/*# sourceMappingURL=ScrollToTheTop.css.map */

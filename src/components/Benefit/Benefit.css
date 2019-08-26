@@ -1,0 +1,155 @@
+.PCB-item {
+  height: 25%;
+  min-width: 40%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+  grid-gap: 5%;
+  width: 500px;
+  margin: 25px 0;
+}
+
+.PCB-item .PCB-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.PCB-item .PCB-item-title {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.PCB-item .PCB-item-desc {
+  font-weight: 100;
+  font-size: 1.8rem;
+  width: 80%;
+}
+
+.PCB-item img {
+  height: 120px;
+}
+
+@media only screen and (max-width: 1600px) {
+  .PCB-item img {
+    height: 100px;
+  }
+  .PCB-item .PCB-item-title {
+    font-size: 2.8rem;
+  }
+  .PCB-item .PCB-item-desc {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .PCB-item .PCB-item-title {
+    font-size: 2.3rem;
+  }
+  .PCB-item .PCB-item-desc {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .PCB-item {
+    width: 90%;
+  }
+  .PCB-item .PCB-item-title {
+    font-size: 3rem;
+  }
+  .PCB-item .PCB-item-desc {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .PCB-item .PCB-item-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .PCB-item {
+    height: 150px;
+  }
+  .PCB-item .PCB-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .PCB-item .PCB-item-title {
+    font-size: 2.3rem;
+  }
+  .PCB-item .PCB-item-desc {
+    width: 100%;
+    font-size: 1.6rem;
+  }
+  .PCB-item img {
+    height: 125px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .PCB-item {
+    height: 100px;
+  }
+  .PCB-item .PCB-item-title {
+    font-size: 2rem;
+  }
+  .PCB-item .PCB-item-desc {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .PCB-item img {
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .PCB-item .PCB-item-title {
+    font-size: 1.7rem;
+  }
+  .PCB-item .PCB-item-desc {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .PCB-item img {
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .PCB-item {
+    min-height: 70px;
+    margin: 10px 0;
+  }
+  .PCB-item .PCB-item-title {
+    font-size: 1.5rem;
+  }
+  .PCB-item .PCB-item-desc {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  .PCB-item img {
+    height: 60px;
+  }
+}
+/*# sourceMappingURL=Benefit.css.map */
