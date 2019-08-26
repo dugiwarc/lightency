@@ -1,108 +1,108 @@
 $base-yellow: #ffde00;
 
 .HomeText {
-  grid-area: 8/5/17/20;
-  transition: all 1s ease;
-  .Home-text {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    justify-content: space-evenly;
-    animation: float 3s infinite;
-    width: 470px;
-    height: 340px;
-    min-width: 470px;
-    min-height: 340px;
-    z-index: 1;
+	grid-area: 8/5/17/20;
+	transition: all 1s ease;
+	.Home-text {
+		display: flex;
+		flex-direction: column;
+		color: white;
+		justify-content: space-evenly;
+		animation: float 3s infinite;
+		width: 470px;
+		height: 340px;
+		min-width: 470px;
+		min-height: 340px;
+		z-index: 1;
 
-    .Home-text-title {
-      font-size: 2.5rem;
-      min-height: 100px;
-    }
-    .Home-text-subtitle {
-      display: flex;
-      flex-direction: column;
-      min-height: 170px;
-      font-size: 100%;
-      width: 90%;
-      flex-direction: center;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transform: translateY(-20px);
-      transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
-    }
-    span {
-      position: relative;
-    }
-    .text-effect {
-      top: 0;
-      left: 0;
-      background-color: $base-yellow;
-      width: 100%;
-      height: 100%;
-      box-sizing: border-box;
-      position: absolute;
-      animation: text-effect 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-    }
-    .text-effect:nth-child(1) {
-      animation-delay: 0.7s;
-    }
-    .second {
-      animation-delay: 1s !important;
-    }
-    .third {
-      animation-delay: 1.1s !important;
-    }
+		.Home-text-title {
+			font-size: 2.5rem;
+			min-height: 100px;
+		}
+		.Home-text-subtitle {
+			display: flex;
+			flex-direction: column;
+			min-height: 170px;
+			font-size: 100%;
+			width: 90%;
+			flex-direction: center;
+			justify-content: center;
+			align-items: center;
+			opacity: 0;
+			transform: translateY(-20px);
+			transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+		}
+		span {
+			position: relative;
+		}
+		// .text-effect {
+		// 	top: 0;
+		// 	left: 0;
+		// 	background-color: $base-yellow;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	box-sizing: border-box;
+		// 	position: absolute;
+		// 	animation: text-effect 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+		// }
+		.text-effect:nth-child(1) {
+			animation-delay: 0.7s;
+		}
+		.second {
+			animation-delay: 1s !important;
+		}
+		.third {
+			animation-delay: 1.1s !important;
+		}
 
-    @keyframes float {
-      0% {
-        transform: translateY(-40px);
-      }
-      50% {
-        transform: translateY(-42px);
-      }
-      100% {
-        transform: translateY(-40px);
-      }
-    }
+		@keyframes float {
+			0% {
+				transform: translateY(-40px);
+			}
+			50% {
+				transform: translateY(-42px);
+			}
+			100% {
+				transform: translateY(-40px);
+			}
+		}
 
-    @keyframes text-effect {
-      0% {
-        width: 100%;
-      }
-      100% {
-        width: 0%;
-      }
-    }
+		@keyframes text-effect {
+			0% {
+				width: 100%;
+			}
+			100% {
+				width: 0%;
+			}
+		}
 
-    .buttons {
-      display: flex;
-      min-height: 70px;
-      opacity: 0;
-      transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
-      transform: translateY(100px);
-    }
-  }
-  @media only screen and (max-width: 1200px) {
-    grid-area: 9/5/17/20;
-  }
-  @media only screen and (max-width: 600px) {
-    grid-area: 6/3/17/20;
-    .Home-text {
-      transform: scale(0.9);
-      animation: none;
-    }
-  }
-  @media only screen and (max-width: 450px) {
-    grid-area: 5/2/17/20;
-    .Home-text {
-      transform: scale(0.7) translate(-80px, -30px);
-      animation: none;
-      .Home-text-subtitle {
-        max-width: 450px;
-        min-height: 170px;
-      }
-    }
-  }
+		.buttons {
+			display: flex;
+			min-height: 70px;
+			opacity: 0;
+			transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+			transform: translateY(100px);
+		}
+	}
+	@media only screen and (max-width: 1200px) {
+		grid-area: 9/5/17/20;
+	}
+	@media only screen and (max-width: 600px) {
+		grid-area: 6/3/17/20;
+		.Home-text {
+			transform: scale(0.9);
+			animation: none;
+		}
+	}
+	@media only screen and (max-width: 450px) {
+		grid-area: 5/2/17/20;
+		.Home-text {
+			transform: scale(0.7) translate(-80px, -30px);
+			animation: none;
+			.Home-text-subtitle {
+				max-width: 450px;
+				min-height: 170px;
+			}
+		}
+	}
 }
