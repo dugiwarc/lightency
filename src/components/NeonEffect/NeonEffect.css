@@ -1,42 +1,0 @@
-.neon-circle {
-  height: 100px;
-  left: 0;
-  border-radius: 50px;
-  clip: rect(101px, 195px, 315px, -21px);
-  position: absolute;
-  -webkit-animation: neon 0.5s ease-in-out infinite alternate;
-          animation: neon 0.5s ease-in-out infinite alternate;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-}
-
-@-webkit-keyframes neon {
-  from {
-    -webkit-box-shadow: 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #fff, 0 0 7px #ffde00, 0 0 9px #ffde00, 0 0 10px #ffde00, 0 0 12px #ffde00, 0 0 17px #ffde00;
-            box-shadow: 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #fff, 0 0 7px #ffde00, 0 0 9px #ffde00, 0 0 10px #ffde00, 0 0 12px #ffde00, 0 0 17px #ffde00;
-  }
-  to {
-    -webkit-box-shadow: 0 0 7px #fff, 0 0 8px #fff, 0 0 9px #fff, 0 0 8px #ffde00, 0 0 12px #ffde00, 0 0 13px #ffde00, 0 0 15px #ffde00, 0 0 20px #ffde00;
-            box-shadow: 0 0 7px #fff, 0 0 8px #fff, 0 0 9px #fff, 0 0 8px #ffde00, 0 0 12px #ffde00, 0 0 13px #ffde00, 0 0 15px #ffde00, 0 0 20px #ffde00;
-  }
-}
-
-@keyframes neon {
-  from {
-    -webkit-box-shadow: 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #fff, 0 0 7px #ffde00, 0 0 9px #ffde00, 0 0 10px #ffde00, 0 0 12px #ffde00, 0 0 17px #ffde00;
-            box-shadow: 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #fff, 0 0 7px #ffde00, 0 0 9px #ffde00, 0 0 10px #ffde00, 0 0 12px #ffde00, 0 0 17px #ffde00;
-  }
-  to {
-    -webkit-box-shadow: 0 0 7px #fff, 0 0 8px #fff, 0 0 9px #fff, 0 0 8px #ffde00, 0 0 12px #ffde00, 0 0 13px #ffde00, 0 0 15px #ffde00, 0 0 20px #ffde00;
-            box-shadow: 0 0 7px #fff, 0 0 8px #fff, 0 0 9px #fff, 0 0 8px #ffde00, 0 0 12px #ffde00, 0 0 13px #ffde00, 0 0 15px #ffde00, 0 0 20px #ffde00;
-  }
-}
-
-@media only screen and (max-width: 950px) {
-  .neon-circle {
-    display: none;
-  }
-}
-/*# sourceMappingURL=NeonEffect.css.map */
