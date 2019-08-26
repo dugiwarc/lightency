@@ -33,9 +33,11 @@ class AMTCity extends React.Component {
 	componentDidUpdate() {
 		!this.state.isVisible &&
 			this.props.yPosition > this.state.offsetTop &&
-			this.setState({
-				isVisible: true
-			});
+			setTimeout(() => {
+				this.setState({
+					isVisible: true
+				});
+			}, 1000);
 	}
 	render() {
 		const defaultOptions = {
