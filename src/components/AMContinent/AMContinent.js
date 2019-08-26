@@ -26,14 +26,11 @@ class AMContinent extends Component {
 		return nextProps.yPosition !== this.props.yPosition;
 	}
 	componentDidMount() {
-		this.setState(
-			{
-				offsetTop:
-					document.querySelector("#AM").offsetTop -
-					document.querySelector(".AMTContinent").offsetHeight * 1.2
-			},
-			() => console.log("this.state.offsetTop", this.state.offsetTop)
-		);
+		this.setState({
+			offsetTop:
+				document.querySelector("#AM").offsetTop -
+				document.querySelector(".AMTContinent").offsetHeight * 1.2
+		});
 		window.addEventListener("resize", this.handleResize);
 	}
 
@@ -42,7 +39,6 @@ class AMContinent extends Component {
 	}
 
 	componentDidUpdate() {
-		console.log("this.props.yPosition", this.props.yPosition);
 		!this.state.isVisible &&
 			this.props.yPosition > this.state.offsetTop &&
 			this.setState({
