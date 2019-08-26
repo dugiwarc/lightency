@@ -7,6 +7,11 @@
 	box-sizing: border-box;
 	.AMTMotto {
 		text-align: center;
-		font-size: 0.8rem;
+		padding: 0 5%;
+	}
+	@media (min-width: 30rem) {
+		.AMTMotto {
+			font-size: calc(1rem + ((1vw - 0.3rem) * 0.5556));
+		}
 	}
 }

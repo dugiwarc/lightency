@@ -1,16 +1,17 @@
 .AMSubtitle {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 50px;
-  min-height: 100px;
-  padding: 0 5%;
-  width: 100vw;
-  font-size: 1.6rem;
-  @media only screen and (max-width: 450px) {
-    margin-top: 0;
-    font-size: 1rem;
-  }
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 50px;
+	min-height: 100px;
+	padding: 0 5%;
+	width: 100vw;
+	@media (min-width: 30rem) {
+		font-size: calc(1rem + ((1vw - 0.3rem) * 1.1111));
+	}
+	@media only screen and(max-width: 450px) {
+		margin-top: 0px;
+	}
 }

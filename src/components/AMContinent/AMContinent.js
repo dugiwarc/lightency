@@ -14,52 +14,83 @@ import Location from "../Location/Location";
 import "./AMContinent.scss";
 
 class AMContinent extends Component {
-  state = { isVisible: false };
-  componentDidUpdate() {
-    this.props.africanMarketIsVisible &&
-      setTimeout(() => {
-        this.setState({ isVisible: true });
-      }, 1000);
-  }
-  render() {
-    const locationStyle = {
-      opacity: this.state.isVisible && "1"
-    };
-    const continentStyle = {
-      display: this.state.isVisible && "block",
-      opacity: this.state.isVisible && "1"
-    };
+	state = { isVisible: false, offsetTop: 0 };
+	handleResize = () => {
+		this.setState({
+			offsetTop:
+				document.querySelector("#AM").offsetTop -
+				document.querySelector(".AMTContinent").offsetTop
+		});
+	};
+	shouldComponentUpdate(nextProps, nextState) {
+		return nextProps.yPosition !== this.props.yPosition;
+	}
+	componentDidMount() {
+		this.setState(
+			{
+				offsetTop:
+					document.querySelector("#AM").offsetTop -
+					document.querySelector(".AMTContinent").offsetHeight
+			},
+			() => console.log("this.state.offsetTop", this.state.offsetTop)
+		);
+		window.addEventListener("resize", this.handleResize);
+	}
 
-    return (
-      <div className="AMTContinent">
-        <object
-          aria-label="continent"
-          aria-required="true"
-          type="image/svg+xml"
-          data={continent}
-          style={continentStyle}
-        />
-        <div className="AMTContinent-locations" style={locationStyle}>
-          {mapinfo.map((item, i) => {
-            return (
-              <Location
-                location={item.location}
-                paragraphs={item.paragraphs}
-                key={i}
-              />
-            );
-          })}
-        </div>
-      </div>
-    );
-  }
+	componentWillUnmount() {
+		window.removeEventListener("resize", this.handleResize);
+	}
+
+	componentDidUpdate() {
+		console.log("this.props.yPosition", this.props.yPosition);
+		!this.state.isVisible &&
+			this.props.yPosition > this.state.offsetTop &&
+			this.setState({
+				isVisible: true
+			});
+	}
+	render() {
+		const locationStyle = {
+			opacity: this.state.isVisible && "1"
+		};
+		const continentStyle = {
+			display: this.state.isVisible && "block",
+			opacity: this.state.isVisible && "1"
+		};
+
+		return (
+			<div className='AMTContinent'>
+				<object
+					aria-label='continent'
+					aria-required='true'
+					type='image/svg+xml'
+					data={continent}
+					style={continentStyle}
+				/>
+				<div className='AMTContinent-locations' style={locationStyle}>
+					{mapinfo.map((item, i) => {
+						return (
+							<Location
+								location={item.location}
+								paragraphs={item.paragraphs}
+								key={i}
+							/>
+						);
+					})}
+				</div>
+			</div>
+		);
+	}
 }
 
-const mapStateToProps = ({ scrollState: { africanMarketIsVisible } }) => ({
-  africanMarketIsVisible
+const mapStateToProps = ({
+	scrollState: { africanMarketIsVisible, yPosition }
+}) => ({
+	africanMarketIsVisible,
+	yPosition
 });
 
 export default connect(
-  mapStateToProps,
-  null
+	mapStateToProps,
+	null
 )(AMContinent);
