@@ -41,16 +41,16 @@ class AMTCity extends React.Component {
 	}
 	render() {
 		const defaultOptions = {
-			loop: false,
-			autoplay: false,
-			animationData: require("./data.json")
+			loop: true,
+			autoplay: true,
+			animationData: require("./data-new.json")
 		};
 		return (
 			<div className='AMTCity' id='AMTCity'>
 				<Lottie
 					options={defaultOptions}
 					overflow={"none"}
-					speed={0.5}
+					speed={0.3}
 					isStopped={!this.state.isVisible}
 					// style={lottieStyles}
 				/>
