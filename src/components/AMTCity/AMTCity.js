@@ -54,6 +54,7 @@ class AMTCity extends React.Component {
 					isStopped={!this.state.isVisible}
 					// style={lottieStyles}
 				/>
+				
 				<div className='AMTMotto'>
 					“The monetary system has to change from a gold backed currency to
 					energy and natural resources backed currency“<div>-Henry Ford</div>
