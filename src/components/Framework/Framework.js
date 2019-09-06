@@ -19,7 +19,7 @@ const Framework = () => {
 					<div className='patches'>
 						{data.map(item => {
 							return (
-								<Fragment>
+								<Fragment key={item.id}>
 									<div className={`${item.className}`}></div>
 									<div className={`child-${item.id}`}>{item.description}</div>
 								</Fragment>

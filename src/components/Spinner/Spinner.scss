@@ -1,0 +1,101 @@
+$base-blue: #202b43;
+$base-gold: #ffca28;
+.container {
+	height: 100vh;
+	z-index: 100;
+}
+.container-rect {
+	border-radius: 10px;
+	position: absolute;
+	height: 200px;
+	top: 40%;
+	width: 400px;
+	background: $base-blue;
+	color: white;
+	left: calc(50% - 200px);
+	display: flex;
+	flex-direction: column;
+	z-index: 100;
+
+	padding: 30px 10px;
+	justify-content: space-evenly;
+	align-items: center;
+	font-family: "Lato", sans-serif;
+	.image {
+		img {
+			height: 70px;
+		}
+	}
+	.title {
+		font-size: 2rem;
+		font-weight: bold;
+		text-align: center;
+	}
+	.button {
+		color: black;
+		margin-top: 5%;
+		border-radius: 5px;
+		background: $base-gold;
+		padding: 10px;
+		text-transform: uppercase;
+		transition: all 0.3s ease-in-out;
+		cursor: pointer;
+	}
+	.button:hover {
+		color: $base-gold;
+		background: black;
+	}
+}
+.main {
+	position: absolute;
+	top: 50%;
+	z-index: 100;
+
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 200px;
+	height: 200px;
+	border: 2px solid transparent;
+	border-radius: 50%;
+}
+.main:before {
+	position: absolute;
+	content: "";
+	width: 200px;
+	height: 200px;
+	border: 2px solid $base-blue;
+	border-radius: 50%;
+	border-block-end-style: hidden;
+	animation: spin 1.6s infinite linear;
+}
+
+.main:after {
+	position: absolute;
+	content: "";
+	top: 14%;
+	left: 12%;
+	width: 150px;
+	height: 150px;
+	border: 2px solid $base-gold;
+	border-radius: 50%;
+	border-block-end-style: hidden;
+	animation: respin 1.3s infinite linear;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(0deg);
+	}
+	from {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes respin {
+	to {
+		transform: rotate(360deg);
+	}
+	from {
+		transform: rotate(0deg);
+	}
+}
