@@ -46,7 +46,6 @@ class SignUpBoard extends React.Component {
 						Sign Up
 					</button>
 				</div>
-				)}
 			</div>
 		);
 	}

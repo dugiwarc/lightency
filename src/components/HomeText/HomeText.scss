@@ -35,16 +35,7 @@ $base-yellow: #ffde00;
 		span {
 			position: relative;
 		}
-		// .text-effect {
-		// 	top: 0;
-		// 	left: 0;
-		// 	background-color: $base-yellow;
-		// 	width: 100%;
-		// 	height: 100%;
-		// 	box-sizing: border-box;
-		// 	position: absolute;
-		// 	animation: text-effect 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-		// }
+
 		.text-effect:nth-child(1) {
 			animation-delay: 0.7s;
 		}
